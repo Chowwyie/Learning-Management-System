@@ -21,9 +21,6 @@ gem "sqlite3",            "~> 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma",               "~> 5.0"
 
-# Use Sass to process CSS
-gem "sassc-rails"           "2.1.2"
-
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
@@ -66,6 +63,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  em "rails-controller-testing", "1.0.5"
+  gem "rails-controller-testing", "1.0.5"
 end
 

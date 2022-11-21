@@ -3,7 +3,7 @@
     <%= form_with model: @presentation do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
-      <%= f.collection_select(:users, User.all, :id, :name, {}, {:multiple => true}) %>
+      <%= f.collection_select(:users, studentList, :id, :name, {}, {:multiple => true}) %>
       <%# <input name="user_id" type="text"> %>
       <%= f.submit "Make New Presentation", class: "btn btn-primary" %>
     <% end %>

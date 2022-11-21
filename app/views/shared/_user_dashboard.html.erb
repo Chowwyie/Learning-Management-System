@@ -1,12 +1,19 @@
 Your profile: <%= @user.name %>, <%= @user.email %>
-<h1>Upcoming Assignments:</h1>
-<h2>Presentations<h2>
+<h1>Upcoming Presentations</h1>
 <% @user.presentations.each do |p| %>
     <% if !p.submitted %>
         <%= link_to p.name, edit_presentation_path(p) %>
     <% end %>
 <% end %>
-<h2>Evaluations<h2>
+<h1>Upcoming Evaluations</h1>
+<% @user.evaluations.each do |e| %>
+    <% if !e.submitted %>
+        <%= link_to e.presentation.name, edit_evaluation_path(e) %>:
+        <% e.presentation.users.each do |user| %>
+            <%= user.name %>,
+        <% end %>
+    <% end %>
+<% end %>
 <h1>Completed Presentations:</h1>
 <% @user.presentations.each do |p| %>
     <% if p.submitted %>

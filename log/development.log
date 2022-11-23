@@ -359,3 +359,1772 @@ Completed 200 OK in 206ms (Views: 178.8ms | ActiveRecord: 8.1ms | Allocations: 2
   [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "charlie@gmail.com"], ["LIMIT", 1]]
   [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "charlie@gmail.com"], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-11-21 11:16:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221120021114_add_admin_to_users.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminToUsers (20221120021114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 0[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminToUsers (20221120021114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 0[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminToUsers (20221121163341)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyToTeam (20221120010930)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_user_id" ON "ateams" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_presentation_id" ON "ateams" ("presentation_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "ateams" ("id","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","created_at","updated_at","presentation_id","user_id" FROM "teams"[0m
+  [1m[35m (15.1ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_2e95ef4bd5"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_teams_on_user_id" ON "teams" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "teams" ("id","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","created_at","updated_at","presentation_id","user_id" FROM "ateams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_user_id" ON "ateams" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_presentation_id" ON "ateams" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "ateams" ("id","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","created_at","updated_at","presentation_id","user_id" FROM "teams"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_2e95ef4bd5"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "teams" ("id","created_at","updated_at","presentation_id")
+                     SELECT "id","created_at","updated_at","presentation_id" FROM "ateams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_presentation_id" ON "ateams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateams" ("id","created_at","updated_at","presentation_id")
+                     SELECT "id","created_at","updated_at","presentation_id" FROM "teams"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "teams" ("id","created_at","updated_at","presentation_id")
+                     SELECT "id","created_at","updated_at","presentation_id" FROM "ateams"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_presentation_id" ON "ateams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateams" ("id","created_at","updated_at","presentation_id")
+                     SELECT "id","created_at","updated_at","presentation_id" FROM "teams"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "teams" ("id","created_at","updated_at")
+                     SELECT "id","created_at","updated_at" FROM "ateams"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (3.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221120010930"]]
+  [1m[36mTRANSACTION (23.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTeams (20221120010757)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (18.9ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (3.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221120010757"]]
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeysToEvaluation (20221119224911)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_user_id" ON "aevaluations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_presentation_id" ON "aevaluations" ("presentation_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id" FROM "evaluations"[0m
+  [1m[35m (12.0ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_43d2c5add4"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_user_id" ON "evaluations" ("user_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id" FROM "aevaluations"[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_user_id" ON "aevaluations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_presentation_id" ON "aevaluations" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id" FROM "evaluations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_43d2c5add4"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id" FROM "aevaluations"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_presentation_id" ON "aevaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id" FROM "evaluations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id" FROM "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_presentation_id" ON "aevaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id" FROM "evaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","score","evaluation","submitted","created_at","updated_at")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at" FROM "aevaluations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (2.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221119224911"]]
+  [1m[36mTRANSACTION (22.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvaluations (20221119223938)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (13.2ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (3.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221119223938"]]
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePresentations (20221119223451)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.4ms)[0m  [1m[35mDROP TABLE "presentations"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (1.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221119223451"]]
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPasswordDigestToUsers (20221119053222)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password_digest" varchar DEFAULT NULL, "admin" boolean DEFAULT 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","email","created_at","updated_at","password_digest","admin")
+                     SELECT "id","name","email","created_at","updated_at","password_digest","admin" FROM "users"[0m
+  [1m[35m (12.6ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin" boolean DEFAULT 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "users" ("id","name","email","created_at","updated_at","admin")
+                     SELECT "id","name","email","created_at","updated_at","admin" FROM "ausers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (2.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221119053222"]]
+  [1m[36mTRANSACTION (26.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddIndexToUsersEmail (20221119044947)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.3ms)[0m  [1m[35mDROP INDEX "index_users_on_email"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (1.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221119044947"]]
+  [1m[36mTRANSACTION (18.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20221117175522)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.8ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (3.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20221117175522"]]
+  [1m[36mTRANSACTION (23.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221117175522)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221117175522"]]
+  [1m[36mTRANSACTION (25.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddIndexToUsersEmail (20221119044947)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119044947"]]
+  [1m[36mTRANSACTION (20.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPasswordDigestToUsers (20221119053222)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.7ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119053222"]]
+  [1m[36mTRANSACTION (22.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePresentations (20221119223451)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "presentations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "submitted" boolean DEFAULT 0, "grade" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119223451"]]
+  [1m[36mTRANSACTION (21.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvaluations (20221119223938)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "score" integer, "evaluation" text, "submitted" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119223938"]]
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeysToEvaluation (20221119224911)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (13.4ms)[0m  [1m[35mALTER TABLE "evaluations" ADD "presentation_id" integer[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_presentation_id" ON "aevaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id" FROM "evaluations"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_43d2c5add4"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id" FROM "aevaluations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "evaluations" ADD "user_id" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_user_id" ON "evaluations" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_user_id" ON "aevaluations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_presentation_id" ON "aevaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id" FROM "evaluations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_43d2c5add4"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+, CONSTRAINT "fk_rails_ef42eba623"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_user_id" ON "evaluations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id" FROM "aevaluations"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119224911"]]
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTeams (20221120010757)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221120010757"]]
+  [1m[36mTRANSACTION (25.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeyToTeam (20221120010930)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.1ms)[0m  [1m[35mALTER TABLE "teams" ADD "presentation_id" integer[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_presentation_id" ON "ateams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateams" ("id","created_at","updated_at","presentation_id")
+                     SELECT "id","created_at","updated_at","presentation_id" FROM "teams"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_2e95ef4bd5"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "teams" ("id","created_at","updated_at","presentation_id")
+                     SELECT "id","created_at","updated_at","presentation_id" FROM "ateams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "teams" ADD "user_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_teams_on_user_id" ON "teams" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_user_id" ON "ateams" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_presentation_id" ON "ateams" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "ateams" ("id","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","created_at","updated_at","presentation_id","user_id" FROM "teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_2e95ef4bd5"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+, CONSTRAINT "fk_rails_45096701b6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_teams_on_user_id" ON "teams" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "teams" ("id","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","created_at","updated_at","presentation_id","user_id" FROM "ateams"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221120010930"]]
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAdminToUsers (20221121163341)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.6ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221121163341"]]
+  [1m[36mTRANSACTION (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-11-21 15:23:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 13117.3ms | Allocations: 131274)
+  Rendered layouts/_shim.html.erb (Duration: 29.4ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 43.9ms | Allocations: 459)
+  Rendered layouts/_footer.html.erb (Duration: 31.5ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 13946.6ms | Allocations: 154881)
+Completed 200 OK in 14271ms (Views: 14012.7ms | ActiveRecord: 0.0ms | Allocations: 158788)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-11-21 15:24:09 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 505.8ms | Allocations: 4435)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 640.9ms | Allocations: 11665)
+Completed 200 OK in 697ms (Views: 650.1ms | ActiveRecord: 0.0ms | Allocations: 12451)
+
+
+Started GET "/signup" for 127.0.0.1 at 2022-11-21 16:01:31 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 13.7ms | Allocations: 212)
+  Rendered users/new.html.erb within layouts/application (Duration: 29.6ms | Allocations: 2476)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 150)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 88.0ms | Allocations: 9642)
+Completed 200 OK in 203ms (Views: 91.2ms | ActiveRecord: 5.7ms | Allocations: 18940)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-11-21 16:01:52 -0500
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Quinnan", "email"=>"qhetrick@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qhetrick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 985)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3385)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 127)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 10396)
+Completed 422 Unprocessable Entity in 70ms (Views: 47.5ms | ActiveRecord: 1.8ms | Allocations: 15758)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-11-21 16:02:06 -0500
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Quinnan", "email"=>"qhetrick@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qhetrick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (5.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Quinnan"], ["email", "qhetrick@gmail.com"], ["created_at", "2022-11-21 21:02:07.209170"], ["updated_at", "2022-11-21 21:02:07.209170"], ["password_digest", "[FILTERED]"], ["admin", nil]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:9292/users/1
+Completed 302 Found in 192ms (ActiveRecord: 14.7ms | Allocations: 4938)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-21 16:02:07 -0500
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPresentation Load (1.4ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:3
+  Rendered users/show.html.erb within layouts/application (Duration: 168.4ms | Allocations: 12281)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 147)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 216.2ms | Allocations: 19612)
+Completed 200 OK in 308ms (Views: 213.4ms | ActiveRecord: 7.7ms | Allocations: 30616)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-11-21 16:02:20 -0500
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 8.5ms | Allocations: 155)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 134)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 57.0ms | Allocations: 7328)
+Completed 200 OK in 74ms (Views: 57.7ms | ActiveRecord: 0.0ms | Allocations: 7705)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-11-21 17:02:39 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 15.4ms | Allocations: 147)
+  Rendered layouts/_shim.html.erb (Duration: 5.4ms | Allocations: 104)
+  Rendered layouts/_header.html.erb (Duration: 9.2ms | Allocations: 472)
+  Rendered layouts/_footer.html.erb (Duration: 4.7ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 175.3ms | Allocations: 8699)
+Completed 200 OK in 235ms (Views: 203.3ms | Allocations: 9531)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:00:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2032.6ms | Allocations: 30734)
+  Rendered layouts/_shim.html.erb (Duration: 13.0ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 19.9ms | Allocations: 456)
+  Rendered layouts/_navbar.erb (Duration: 6.9ms | Allocations: 97)
+  Rendered layouts/_footer.html.erb (Duration: 16.5ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 2639.6ms | Allocations: 54726)
+Completed 200 OK in 2754ms (Views: 2667.0ms | ActiveRecord: 0.0ms | Allocations: 58198)
+
+
+Started GET "/evaluations" for 127.0.0.1 at 2022-11-23 14:00:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/evaluations"):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:00:51 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 19.9ms | Allocations: 777)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_navbar.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 71.7ms | Allocations: 8048)
+Completed 200 OK in 89ms (Views: 72.5ms | ActiveRecord: 0.0ms | Allocations: 8355)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:06:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3178.2ms | Allocations: 77712)
+  Rendered layouts/_shim.html.erb (Duration: 4.9ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 457)
+  Rendered layouts/_navbar.erb (Duration: 5.4ms | Allocations: 97)
+  Rendered layouts/_footer.html.erb (Duration: 4.4ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 3454.6ms | Allocations: 101618)
+Completed 200 OK in 3515ms (Views: 3471.5ms | ActiveRecord: 0.0ms | Allocations: 105090)
+
+
+Started GET "/signup" for 127.0.0.1 at 2022-11-23 14:07:38 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 15.4ms | Allocations: 211)
+  Rendered users/new.html.erb within layouts/application (Duration: 162.1ms | Allocations: 4027)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 153)
+  Rendered layouts/_navbar.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 286.3ms | Allocations: 11291)
+Completed 200 OK in 412ms (Views: 296.1ms | ActiveRecord: 7.9ms | Allocations: 20134)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:10:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1555.4ms | Allocations: 30821)
+  Rendered layouts/_shim.html.erb (Duration: 9.2ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 13.7ms | Allocations: 456)
+  Rendered layouts/_footer.html.erb (Duration: 12.5ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 1986.5ms | Allocations: 54584)
+Completed 200 OK in 2094ms (Views: 2016.9ms | ActiveRecord: 0.0ms | Allocations: 58056)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:11:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3121.8ms | Allocations: 79121)
+  Rendered layouts/_shim.html.erb (Duration: 3.6ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 5.0ms | Allocations: 457)
+  Rendered layouts/_footer.html.erb (Duration: 4.0ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 3402.0ms | Allocations: 102820)
+Completed 200 OK in 3455ms (Views: 3418.7ms | ActiveRecord: 0.0ms | Allocations: 106292)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-11-23 14:11:29 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 116.3ms | Allocations: 2701)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 137)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 180.2ms | Allocations: 9943)
+Completed 200 OK in 206ms (Views: 183.5ms | ActiveRecord: 0.0ms | Allocations: 10728)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:12:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1260.3ms | Allocations: 30860)
+  Rendered layouts/_shim.html.erb (Duration: 3.7ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 456)
+  Rendered layout layouts/application.html.erb (Duration: 1603.7ms | Allocations: 56086)
+Completed 500 Internal Server Error in 1659ms (ActiveRecord: 0.0ms | Allocations: 59516)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/mnt/c/Users/qhetr/Downloads/Team-Exited-With-Code-0-Rails-App/app/views"
+  * "/home/qhetrick/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/home/qhetrick/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  layouts/header
+               layouts/footer
+               layouts/sidenav
+               layouts/shim
+               layouts/action_text/contents/content
+               active_storage/blobs/blob):
+    13:   </head>
+    14:   <body>
+    15:     <%= render 'layouts/header' %>
+    16:     <%= render 'layouts/navbar' %>
+    17:     <div class="container">
+    18:       <% flash.each do |message_type, message| %>
+    19:         <div class="alert alert-<%= message_type %>"><%= message %></div>
+  
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:12:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1188.8ms | Allocations: 30821)
+  Rendered layouts/_shim.html.erb (Duration: 3.6ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 456)
+  Rendered layouts/_sidenav.erb (Duration: 3.5ms | Allocations: 97)
+  Rendered layouts/_footer.html.erb (Duration: 3.0ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 1552.3ms | Allocations: 54840)
+Completed 200 OK in 1623ms (Views: 1569.3ms | ActiveRecord: 0.0ms | Allocations: 58314)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-11-23 14:12:55 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 42.0ms | Allocations: 2713)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered layouts/_sidenav.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 104.6ms | Allocations: 10036)
+Completed 200 OK in 133ms (Views: 109.9ms | ActiveRecord: 0.0ms | Allocations: 10823)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-23 14:13:06 -0500
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"hetrick.140@osu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hetrick.140@osu.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 649)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_sidenav.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 69.7ms | Allocations: 7763)
+Completed 422 Unprocessable Entity in 169ms (Views: 70.7ms | ActiveRecord: 3.8ms | Allocations: 14295)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-11-23 14:13:18 -0500
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"qhetrick@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qhetrick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:9292/users/1
+Completed 302 Found in 193ms (ActiveRecord: 4.5ms | Allocations: 5618)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 14:13:18 -0500
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPresentation Load (1.7ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:3
+  Rendered users/show.html.erb within layouts/application (Duration: 124.8ms | Allocations: 8564)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 12)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 1515)
+  Rendered layouts/_sidenav.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 180.3ms | Allocations: 17388)
+Completed 200 OK in 249ms (Views: 180.0ms | ActiveRecord: 12.0ms | Allocations: 24808)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:20:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3342.7ms | Allocations: 80689)
+  Rendered layouts/_shim.html.erb (Duration: 5.1ms | Allocations: 109)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 61.2ms | Allocations: 11744)
+  Rendered layouts/_footer.html.erb (Duration: 5.0ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 3710.3ms | Allocations: 115612)
+Completed 200 OK in 3771ms (Views: 3716.8ms | ActiveRecord: 8.7ms | Allocations: 119085)
+
+
+Started GET "/help" for 127.0.0.1 at 2022-11-23 14:21:08 -0500
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 8.9ms | Allocations: 145)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 839)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 81.8ms | Allocations: 8141)
+Completed 200 OK in 107ms (Views: 81.6ms | ActiveRecord: 1.2ms | Allocations: 8545)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 14:21:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 3.2ms | Allocations: 100)
+  [1m[36mPresentation Load (2.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 114.9ms | Allocations: 8846)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 829)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 207.4ms | Allocations: 17002)
+Completed 200 OK in 252ms (Views: 202.8ms | ActiveRecord: 13.6ms | Allocations: 24314)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:22:34 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 23.0ms | Allocations: 660)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 749)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 83.6ms | Allocations: 8296)
+Completed 200 OK in 98ms (Views: 83.2ms | ActiveRecord: 1.4ms | Allocations: 8598)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 14:22:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mPresentation Load (2.0ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 962)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 748)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 75.4ms | Allocations: 8738)
+Completed 200 OK in 97ms (Views: 73.3ms | ActiveRecord: 5.0ms | Allocations: 9490)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:24:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1245.9ms | Allocations: 30783)
+  Rendered layouts/_shim.html.erb (Duration: 5.1ms | Allocations: 109)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 78.4ms | Allocations: 11746)
+  Rendered layouts/_footer.html.erb (Duration: 4.8ms | Allocations: 232)
+  Rendered layout layouts/application.html.erb (Duration: 1675.5ms | Allocations: 65809)
+Completed 200 OK in 1742ms (Views: 1686.7ms | ActiveRecord: 9.5ms | Allocations: 69283)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 14:24:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 4.1ms | Allocations: 100)
+  [1m[36mPresentation Load (1.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 71.6ms | Allocations: 8842)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 829)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 148.3ms | Allocations: 16923)
+Completed 200 OK in 202ms (Views: 148.5ms | ActiveRecord: 12.1ms | Allocations: 24302)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 14:32:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3022.5ms | Allocations: 80743)
+  Rendered layouts/_shim.html.erb (Duration: 4.2ms | Allocations: 109)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 47.9ms | Allocations: 11744)
+  Rendered layouts/_footer.html.erb (Duration: 4.2ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 3309.2ms | Allocations: 115666)
+Completed 200 OK in 3364ms (Views: 3317.6ms | ActiveRecord: 5.5ms | Allocations: 119139)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 14:32:36 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 4.8ms | Allocations: 100)
+  [1m[36mPresentation Load (2.4ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 94.1ms | Allocations: 8840)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 829)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 176.6ms | Allocations: 16881)
+Completed 200 OK in 230ms (Views: 173.6ms | ActiveRecord: 11.5ms | Allocations: 24251)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPresentation Load (2.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:38:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1340.5ms | Allocations: 30793)
+  Rendered layouts/_shim.html.erb (Duration: 4.4ms | Allocations: 112)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 63.2ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 5.5ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1764.4ms | Allocations: 65865)
+Completed 200 OK in 1830ms (Views: 1772.6ms | ActiveRecord: 9.1ms | Allocations: 69339)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:38:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 5.7ms | Allocations: 212)
+  [1m[36mPresentation Load (1.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 78.9ms | Allocations: 8952)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 144.8ms | Allocations: 16966)
+Completed 200 OK in 193ms (Views: 143.7ms | ActiveRecord: 9.8ms | Allocations: 23488)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:38:50 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered users/people.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2704)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 2798)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms | Allocations: 3104)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f4ca802ce88>::Users
+
+'.freeze;     Users.each do |u| 
+              ^^^^^):
+    4: <%= render 'layouts/sidenav' %>
+    5: <div class='content'>
+    6:     <h1>Instructors</h1>
+    7:     <% Users.each do |u| %>
+    8:         <% if u.admin %>
+    9:             <%= u.name %>
+   10:             <%= u.email %>
+  
+app/views/users/people.html.erb:7
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:39:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1378.8ms | Allocations: 30859)
+  Rendered layouts/_shim.html.erb (Duration: 4.9ms | Allocations: 112)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 71.6ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 6.2ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1835.9ms | Allocations: 65889)
+Completed 200 OK in 1908ms (Views: 1843.3ms | ActiveRecord: 8.8ms | Allocations: 69365)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:39:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 3.8ms | Allocations: 212)
+  [1m[36mPresentation Load (1.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 73.3ms | Allocations: 8953)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 138.7ms | Allocations: 16986)
+Completed 200 OK in 190ms (Views: 136.9ms | ActiveRecord: 10.5ms | Allocations: 23508)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:40:00 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered users/people.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2567)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2661)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 2967)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @Users.each do |u| 
+                    ^^^^^):
+    4: <%= render 'layouts/sidenav' %>
+    5: <div class='content'>
+    6:     <h1>Instructors</h1>
+    7:     <% @Users.each do |u| %>
+    8:         <% if u.admin %>
+    9:             <%= u.name %>
+   10:             <%= u.email %>
+  
+app/views/users/people.html.erb:7
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:41:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1208.4ms | Allocations: 30819)
+  Rendered layouts/_shim.html.erb (Duration: 4.4ms | Allocations: 112)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 59.0ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 6.8ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1619.2ms | Allocations: 65888)
+Completed 200 OK in 1702ms (Views: 1635.0ms | ActiveRecord: 6.7ms | Allocations: 69362)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:41:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 5.5ms | Allocations: 212)
+  [1m[36mPresentation Load (1.6ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 77.6ms | Allocations: 8953)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 141.9ms | Allocations: 16975)
+Completed 200 OK in 195ms (Views: 140.4ms | ActiveRecord: 12.1ms | Allocations: 23497)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:41:27 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.2ms | Allocations: 47)
+  Rendered users/people.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2568)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2662)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 2968)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @Users.each do |u| 
+                    ^^^^^):
+    4: <%= render 'layouts/sidenav' %>
+    5: <div class='content'>
+    6:     <h1>Instructors</h1>
+    7:     <% @Users.each do |u| %>
+    8:         <% if u.admin %>
+    9:             <%= u.name %>
+   10:             <%= u.email %>
+  
+app/views/users/people.html.erb:7
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:41:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1264.6ms | Allocations: 30838)
+  Rendered layouts/_shim.html.erb (Duration: 4.1ms | Allocations: 112)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 68.1ms | Allocations: 11746)
+  Rendered layouts/_footer.html.erb (Duration: 4.3ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1673.4ms | Allocations: 65889)
+Completed 200 OK in 1739ms (Views: 1679.1ms | ActiveRecord: 9.5ms | Allocations: 69363)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:42:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 7.0ms | Allocations: 212)
+  [1m[36mPresentation Load (1.7ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 81.0ms | Allocations: 8953)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 139.5ms | Allocations: 16967)
+Completed 200 OK in 188ms (Views: 136.8ms | ActiveRecord: 10.2ms | Allocations: 23489)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:42:08 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered users/people.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2567)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2661)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 2967)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @users.each do |u| 
+                    ^^^^^):
+    4: <%= render 'layouts/sidenav' %>
+    5: <div class='content'>
+    6:     <h1>Instructors</h1>
+    7:     <% @users.each do |u| %>
+    8:         <% if u.admin %>
+    9:             <%= u.name %>
+   10:             <%= u.email %>
+  
+app/views/users/people.html.erb:7
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:45:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1173.2ms | Allocations: 30774)
+  Rendered layouts/_shim.html.erb (Duration: 7.1ms | Allocations: 112)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 66.0ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 4.5ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1596.3ms | Allocations: 65842)
+Completed 200 OK in 1664ms (Views: 1600.3ms | ActiveRecord: 10.9ms | Allocations: 69318)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:45:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 4.0ms | Allocations: 212)
+  Rendered users/show.html.erb within layouts/application (Duration: 19.0ms | Allocations: 2830)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 2928)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 6.0ms | Allocations: 9432)
+
+
+  
+ActionView::Template::Error (undefined method `presentations' for nil:NilClass
+
+'.freeze;     @users.presentations.each do |p| 
+                    ^^^^^^^^^^^^^^
+Did you mean?  present?):
+    2: <div class='content'>
+    3:     Your profile: <%= @user.name %>, <%= @user.email %>
+    4:     <h1>To-do Presentations:</h1>
+    5:     <% @users.presentations.each do |p| %>
+    6:         <% if !p.submitted %>
+    7:             <%= p.name %>
+    8:         <% end %>
+  
+app/views/users/show.html.erb:5
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:45:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1260.2ms | Allocations: 30754)
+  Rendered layouts/_shim.html.erb (Duration: 3.7ms | Allocations: 112)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 64.5ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 5.1ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1655.7ms | Allocations: 65821)
+Completed 200 OK in 1721ms (Views: 1665.6ms | ActiveRecord: 7.9ms | Allocations: 69295)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:45:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 4.3ms | Allocations: 212)
+  [1m[36mPresentation Load (1.7ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 73.7ms | Allocations: 8954)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 797)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 134.2ms | Allocations: 16963)
+Completed 200 OK in 187ms (Views: 133.6ms | ActiveRecord: 11.3ms | Allocations: 23484)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:45:57 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.2ms | Allocations: 47)
+  Rendered users/people.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2565)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 2659)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 2965)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @user.each do |u| 
+                   ^^^^^):
+    4: <%= render 'layouts/sidenav' %>
+    5: <div class='content'>
+    6:     <h1>Instructors</h1>
+    7:     <% @user.each do |u| %>
+    8:         <% if u.admin %>
+    9:             <%= u.name %>
+   10:             <%= u.email %>
+  
+app/views/users/people.html.erb:7
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:49:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1236.8ms | Allocations: 30787)
+  Rendered layouts/_shim.html.erb (Duration: 5.6ms | Allocations: 112)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 64.5ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 4.8ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1624.8ms | Allocations: 65863)
+Completed 200 OK in 1687ms (Views: 1632.3ms | ActiveRecord: 8.2ms | Allocations: 69337)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:49:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 4.0ms | Allocations: 212)
+  [1m[36mPresentation Load (1.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 74.4ms | Allocations: 8952)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 143.3ms | Allocations: 16978)
+Completed 200 OK in 187ms (Views: 141.7ms | ActiveRecord: 10.2ms | Allocations: 23500)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:49:18 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered users/people.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5381)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5475)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 5781)
+
+
+  
+ActionView::Template::Error (undefined method `each' for User:Class):
+    4: <%= render 'layouts/sidenav' %>
+    5: <div class='content'>
+    6:     <h1>Instructors</h1>
+    7:     <% User.each do |u| %>
+    8:         <% if u.admin %>
+    9:             <%= u.name %>
+   10:             <%= u.email %>
+  
+app/views/users/people.html.erb:7
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:50:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1097.9ms | Allocations: 30828)
+  Rendered layouts/_shim.html.erb (Duration: 4.1ms | Allocations: 112)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 65.6ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 5.3ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1503.9ms | Allocations: 65860)
+Completed 200 OK in 1563ms (Views: 1511.1ms | ActiveRecord: 9.5ms | Allocations: 69334)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:50:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 3.2ms | Allocations: 212)
+  [1m[36mPresentation Load (1.0ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 64.2ms | Allocations: 8953)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 122.6ms | Allocations: 16969)
+Completed 200 OK in 164ms (Views: 119.6ms | ActiveRecord: 11.4ms | Allocations: 23491)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:50:10 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.2ms | Allocations: 47)
+  Rendered users/people.html.erb within layouts/application (Duration: 4.9ms | Allocations: 498)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 743)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | Allocations: 8267)
+Completed 200 OK in 85ms (Views: 62.4ms | ActiveRecord: 1.3ms | Allocations: 8564)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:54:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1098.0ms | Allocations: 30796)
+  Rendered layouts/_shim.html.erb (Duration: 4.5ms | Allocations: 112)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 66.6ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 4.7ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1545.8ms | Allocations: 65833)
+Completed 200 OK in 1608ms (Views: 1551.2ms | ActiveRecord: 9.6ms | Allocations: 69307)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:55:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 9.3ms | Allocations: 212)
+  [1m[36mPresentation Load (1.9ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 115.1ms | Allocations: 8952)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 178.8ms | Allocations: 16960)
+Completed 200 OK in 240ms (Views: 179.0ms | ActiveRecord: 12.4ms | Allocations: 23482)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:55:03 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.2ms | Allocations: 47)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:14
+  Rendered users/people.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1623)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 734)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | Allocations: 9370)
+Completed 200 OK in 96ms (Views: 72.7ms | ActiveRecord: 2.1ms | Allocations: 9668)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:56:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1219.5ms | Allocations: 30813)
+  Rendered layouts/_shim.html.erb (Duration: 5.1ms | Allocations: 112)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 68.6ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 5.9ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1650.2ms | Allocations: 65852)
+Completed 200 OK in 1715ms (Views: 1658.9ms | ActiveRecord: 7.7ms | Allocations: 69326)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:56:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 4.8ms | Allocations: 217)
+  [1m[36mPresentation Load (1.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 74.2ms | Allocations: 8958)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 140.2ms | Allocations: 16971)
+Completed 200 OK in 194ms (Views: 138.2ms | ActiveRecord: 10.8ms | Allocations: 23493)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 15:56:26 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.1ms | Allocations: 47)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:14
+  Rendered users/people.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1637)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 734)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 71.0ms | Allocations: 9403)
+Completed 200 OK in 88ms (Views: 69.3ms | ActiveRecord: 2.6ms | Allocations: 9700)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 15:58:17 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 25.3ms | Allocations: 1017)
+  Rendered layouts/_shim.html.erb (Duration: 4.1ms | Allocations: 103)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 18.7ms | Allocations: 1159)
+  Rendered layouts/_footer.html.erb (Duration: 9.6ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 136.9ms | Allocations: 9931)
+Completed 200 OK in 160ms (Views: 142.5ms | ActiveRecord: 1.7ms | Allocations: 10760)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 15:58:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 3.5ms | Allocations: 205)
+  [1m[36mPresentation Load (1.5ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 20.9ms | Allocations: 1640)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 782)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 118.8ms | Allocations: 9716)
+Completed 200 OK in 146ms (Views: 121.7ms | ActiveRecord: 3.9ms | Allocations: 10849)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 16:01:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1110.5ms | Allocations: 30778)
+  Rendered layouts/_shim.html.erb (Duration: 6.5ms | Allocations: 112)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 67.3ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 4.4ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1493.5ms | Allocations: 65808)
+Completed 200 OK in 1555ms (Views: 1510.2ms | ActiveRecord: 8.1ms | Allocations: 69283)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 16:01:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 4.1ms | Allocations: 258)
+  [1m[36mPresentation Load (1.5ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 79.1ms | Allocations: 8999)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 794)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 142.4ms | Allocations: 17006)
+Completed 200 OK in 190ms (Views: 139.5ms | ActiveRecord: 12.5ms | Allocations: 23528)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2022-11-23 16:01:42 -0500
+Processing by UsersController#show as HTML
+Completed 404 Not Found in 17ms (ActiveRecord: 0.0ms | Allocations: 563)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 16:02:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.2ms | Allocations: 100)
+  [1m[36mPresentation Load (0.8ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1066)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 756)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 70.9ms | Allocations: 9120)
+Completed 200 OK in 86ms (Views: 68.9ms | ActiveRecord: 3.7ms | Allocations: 9988)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 16:02:08 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.2ms | Allocations: 73)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:19
+  Rendered users/people.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1633)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 733)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 75.3ms | Allocations: 9364)
+Completed 200 OK in 92ms (Views: 74.0ms | ActiveRecord: 2.2ms | Allocations: 9627)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 16:04:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1143.3ms | Allocations: 30782)
+  Rendered layouts/_shim.html.erb (Duration: 4.5ms | Allocations: 112)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 61.6ms | Allocations: 11745)
+  Rendered layouts/_footer.html.erb (Duration: 3.2ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 1565.1ms | Allocations: 65859)
+Completed 200 OK in 1626ms (Views: 1576.4ms | ActiveRecord: 6.3ms | Allocations: 69334)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 16:04:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 6.4ms | Allocations: 1106)
+  [1m[36mPresentation Load (1.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 75.3ms | Allocations: 9842)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 130.8ms | Allocations: 17089)
+Completed 200 OK in 178ms (Views: 126.7ms | ActiveRecord: 12.1ms | Allocations: 23611)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 16:05:02 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 17.4ms | Allocations: 662)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 764)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 74.5ms | Allocations: 8356)
+Completed 200 OK in 87ms (Views: 73.3ms | ActiveRecord: 2.1ms | Allocations: 8657)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 16:05:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 2.1ms | Allocations: 783)
+  [1m[36mPresentation Load (1.0ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1738)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 69.8ms | Allocations: 8828)
+Completed 200 OK in 88ms (Views: 68.7ms | ActiveRecord: 3.0ms | Allocations: 9595)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 16:05:09 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 3.9ms | Allocations: 780)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:19
+  Rendered users/people.html.erb within layouts/application (Duration: 16.7ms | Allocations: 2363)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 108.2ms | Allocations: 9431)
+Completed 200 OK in 124ms (Views: 108.9ms | ActiveRecord: 2.2ms | Allocations: 9696)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 16:05:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 3.0ms | Allocations: 782)
+  [1m[36mPresentation Load (1.5ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1684)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 8774)
+Completed 200 OK in 74ms (Views: 59.7ms | ActiveRecord: 3.5ms | Allocations: 9519)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 16:05:19 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 4.1ms | Allocations: 777)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:19
+  Rendered users/people.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1901)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 8963)
+Completed 200 OK in 78ms (Views: 55.1ms | ActiveRecord: 3.3ms | Allocations: 9225)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-23 16:13:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3282.0ms | Allocations: 80775)
+  Rendered layouts/_shim.html.erb (Duration: 4.2ms | Allocations: 109)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 57.6ms | Allocations: 11744)
+  Rendered layouts/_footer.html.erb (Duration: 3.8ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 3578.2ms | Allocations: 115692)
+Completed 200 OK in 3641ms (Views: 3588.0ms | ActiveRecord: 7.4ms | Allocations: 119165)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-11-23 16:13:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 7.2ms | Allocations: 1124)
+  [1m[36mPresentation Load (1.4ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 83.1ms | Allocations: 9860)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 171.9ms | Allocations: 17108)
+Completed 200 OK in 219ms (Views: 167.9ms | ActiveRecord: 13.2ms | Allocations: 23629)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 16:16:10 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 3.6ms | Allocations: 844)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:19
+  Rendered users/people.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2437)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 216)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 90.7ms | Allocations: 9507)
+Completed 200 OK in 106ms (Views: 89.8ms | ActiveRecord: 2.2ms | Allocations: 9805)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-11-23 16:17:39 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 5.0ms | Allocations: 795)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:19
+  Rendered users/people.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1919)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 216)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 70.9ms | Allocations: 8977)
+Completed 200 OK in 93ms (Views: 69.3ms | ActiveRecord: 2.6ms | Allocations: 9239)
+
+

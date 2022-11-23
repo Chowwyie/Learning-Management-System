@@ -17,6 +17,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(update_params)
+    redirect_to current_user
+  end
+
   private
 
     def user_params
@@ -27,5 +33,4 @@ class UsersController < ApplicationController
     def authorized?
       @user.admin
     end
-
 end

@@ -1,21 +1,28 @@
 class PresentationsController < ApplicationController
+    include SessionsHelper
+    def index 
+        @presentations = Presentation.all
+    end 
+
+    def new
+        @presentation = Presentation.new
+    end
+
     def create
         @presentation = Presentation.new(presentation_params)
         ids = user_ids[:users]
         ids.shift
-        if ids.length <= 0
-            render 'static_pages/home', status: :unprocessable_entity
-        else
-            if @presentation.save
-                assign_evaluations(@presentation.id, ids)
-                flash[:success] = "Presentation created!"
-                ids.each do |id|
-                    @presentation.users << User.find(id)
-                end
-                redirect_to root_url
-            else
-                render 'static_pages/home', status: :unprocessable_entity
+        if @presentation.save
+            ids.each do |id|
+                @presentation.users << User.find(id)
             end
+            assign_evaluations(@presentation)
+            flash[:success] = "Presentation created!"
+            redirect_to new_presentation_path
+        else
+            # flash[:danger] = "Failure not saved"
+            @user = current_user
+            render "presentations/new", status: :unprocessable_entity
         end
     end
   
@@ -34,6 +41,10 @@ class PresentationsController < ApplicationController
         end
     end
 
+    def show
+        @presentation = Presentation.find(params[:id])
+    end 
+
     def destroy
     end
 
@@ -44,14 +55,16 @@ class PresentationsController < ApplicationController
         end 
 
         def presentation_params
-            params.require(:presentation).permit(:name)
+            params.require(:presentation).permit(:name, :duedate)
         end
 
-        def assign_evaluations(presentation_id, presentation_user_ids)
+        def assign_evaluations(presentation)
             users = User.all
             users.each do |user|
-                if presentation_user_ids.exclude?(user.id.to_s) && !user.admin
-                    eval = Evaluation.new( presentation_id: presentation_id, user_id: user.id)
+                # if user is a student who did not present
+                if presentation.users.exclude?(user) && !user.admin
+                    # automatically sends evaluations to each user due a week from the presentation date.
+                    eval = Evaluation.new(presentation_id: presentation.id, user_id: user.id, duedate: presentation.duedate + 604800)
                     eval.save
                 end
             end

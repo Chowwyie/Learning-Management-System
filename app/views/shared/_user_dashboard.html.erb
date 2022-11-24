@@ -1,10 +1,6 @@
 Your profile: <%= @user.name %>, <%= @user.email %>
 <h1>Upcoming Presentations</h1>
-<% @user.presentations.each do |p| %>
-    <% if !p.submitted %>
-        <%= link_to p.name, edit_presentation_path(p) %>
-    <% end %>
-<% end %>
+    <%= render 'presentations/presentation_table', presentations: @user.presentations %>
 <h1>Upcoming Evaluations</h1>
 <% @user.evaluations.each do |e| %>
     <% if !e.submitted %>
@@ -17,6 +13,6 @@ Your profile: <%= @user.name %>, <%= @user.email %>
 <h1>Completed Presentations:</h1>
 <% @user.presentations.each do |p| %>
     <% if p.submitted %>
-        <%= p.name %>
+        <%= link_to p.name, presentation_path(p) %>
     <% end %>
 <% end %>

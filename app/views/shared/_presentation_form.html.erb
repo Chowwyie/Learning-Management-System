@@ -1,9 +1,14 @@
+
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with model: @presentation do |f| %>
-      <%= f.label :name %>
+    <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :name, 'Presentation Name' %>
       <%= f.text_field :name, class: 'form-control' %>
-      <%= f.collection_select(:users, studentList, :id, :name, {}, {:multiple => true}) %>
+      <%= f.label :duedate, 'Due Date' %>
+      <%= f.datetime_field :duedate, class: 'form-control' %>
+      <%= f.label :users, 'Assign Students' %>
+      <%= f.collection_select(:users, studentList, :id, :name, {}, {:multiple => true, :required => true}) %>
       <%# <input name="user_id" type="text"> %>
       <%= f.submit "Make New Presentation", class: "btn btn-primary" %>
     <% end %>

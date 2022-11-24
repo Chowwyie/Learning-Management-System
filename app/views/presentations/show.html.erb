@@ -1,0 +1,22 @@
+<%= @presentation.grade ? @presentation.grade : "Not Graded"%>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Evaluation ID</th>
+            <th scope="col">Score</th>
+            <th scope="col">Comment</th>
+        <tr>
+    </thead>
+    <tbody>
+        <% @presentation.evaluations.each do |evaluation|%>
+            <% unless !evaluation.submitted %>
+                <tr>
+                    <th scope="row"><%= evaluation.id %></th>
+                    <td><%= evaluation.score %><td>
+                    <td><%= evaluation.evaluation %><td>
+                </tr>
+            <% end %>
+        <% end %>
+    </tbody>
+</table>

@@ -4,6 +4,7 @@ class CreatePresentations < ActiveRecord::Migration[7.0]
       t.string :name
       t.boolean :submitted, :default => false
       t.integer :grade
+      t.datetime :duedate
 
       t.timestamps
     end

@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Admin</th>
+        <tr>
+    </thead>
+    <tbody>
+
+    <% User.all.each do |user| %>
+        <tr>
+            <th scope="row"><%= user.name %></th>
+            <td><%= user.email %></td>
+            <td><%= user.admin %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

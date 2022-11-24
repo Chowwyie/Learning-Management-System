@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_20_010930) do
     t.integer "score"
     t.text "evaluation"
     t.boolean "submitted", default: false
+    t.datetime "duedate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "presentation_id"
@@ -27,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_20_010930) do
     t.string "name"
     t.boolean "submitted", default: false
     t.integer "grade"
+    t.datetime "duedate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

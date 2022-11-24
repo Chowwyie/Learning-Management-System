@@ -4,6 +4,7 @@ class CreateEvaluations < ActiveRecord::Migration[7.0]
       t.integer :score
       t.text :evaluation
       t.boolean :submitted, :default => false
+      t.datetime :duedate
 
       t.timestamps
     end

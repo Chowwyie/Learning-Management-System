@@ -3,6 +3,11 @@
 
 
 /* universal */
+$side-navbar: 15em;
+
+html {
+  height:100%
+}
 
 body {
     padding-top: 60px;
@@ -141,4 +146,31 @@ input {
 
 .dropdown-menu.active {
   display: block;
+}
+
+/* nav bar */
+
+#side-navbar {
+  position: fixed;
+  height: 100%;
+  width: $side-navbar;
+  overflow-wrap:break-word;
+  overflow-y: scroll;
+  display: inline-block;
+  ul {
+    list-style: none;
+    li {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-size: 1.2em;
+      a {
+        color: #e81b1b;;
+      }
+    }
+  }
+  
+}
+
+.container {
+  margin-left: $side-navbar;
 }

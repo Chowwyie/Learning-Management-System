@@ -9,4 +9,9 @@ module ApplicationHelper
         "#{page_title} | #{base_title}"
       end
     end
+
+    def is_active(controller, action)       
+      params[:controller] == controller && params[:action] == action ? "active" : "notactive"       
+    end
+  
 end

@@ -158,19 +158,51 @@ input {
   overflow-y: scroll;
   display: inline-block;
   ul {
+    padding-left: 1em;
+    height: 100%;
     list-style: none;
-    li {
-      padding-top: 1em;
-      padding-bottom: 1em;
-      font-size: 1.2em;
+    .section {
       a {
-        color: #e81b1b;;
+        display: block;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 0.5em;
+        border-radius: 0.5em;
+        border-width: 0.12em;
+        border-color: white;
+        border-style: solid;
+        font-size: 1.2em;
+        color: #bb0000;
+      }
+      a:active {
+        border-color: #e81b1b;
+      }
+      a.active {
+        background-color: #c2c2c2;
+        color: #282828;
+      }
+      a.active:hover {
+        background-color: #ddd;
       }
     }
   }
   
 }
 
-.container {
-  margin-left: $side-navbar;
+#side-navbar-spacer {
+  display: block;
+  width: $side-navbar;
+  height: 100%;
 }
+
+// .container {
+//   display: inline-block;
+// }
+
+.content-container {
+  display: flex;
+}
+// .container {
+//   display: inline-block;
+//   margin-left: $side-navbar;
+// }

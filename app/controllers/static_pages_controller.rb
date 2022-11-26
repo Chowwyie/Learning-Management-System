@@ -8,6 +8,9 @@ class StaticPagesController < ApplicationController
   def about
   end
   
+  def grade_report
+  end
+  
   def contact
   end
 end

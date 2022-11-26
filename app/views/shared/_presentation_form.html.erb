@@ -5,6 +5,8 @@
     <%= render 'shared/error_messages', object: f.object %>
       <%= f.label :name, 'Presentation Name' %>
       <%= f.text_field :name, class: 'form-control' %>
+      <%= f.label :pointvalue, 'Point value' %>
+      <%= f.number_field :pointvalue, class: 'form-control' %>
       <%= f.label :duedate, 'Due Date' %>
       <%= f.datetime_field :duedate, class: 'form-control' %>
       <%= f.label :users, 'Assign Students' %>

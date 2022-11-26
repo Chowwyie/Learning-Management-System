@@ -3,8 +3,9 @@ class CreatePresentations < ActiveRecord::Migration[7.0]
     create_table :presentations do |t|
       t.string :name
       t.boolean :submitted, :default => false
-      t.integer :grade
+      t.decimal :grade
       t.datetime :duedate
+      t.integer :pointvalue
 
       t.timestamps
     end

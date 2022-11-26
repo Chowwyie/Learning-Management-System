@@ -27,8 +27,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_20_010930) do
   create_table "presentations", force: :cascade do |t|
     t.string "name"
     t.boolean "submitted", default: false
-    t.integer "grade"
+    t.decimal "grade"
     t.datetime "duedate"
+    t.integer "pointvalue"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -32,10 +32,9 @@ class PresentationsController < ApplicationController
 
     def update
         @presentation = Presentation.find(params[:id])
-        @presentation.submitted = true
-        if @presentation.save
-            flash[:success] = "Presentation submitted!"
-            redirect_to root_url
+        if @presentation.update(presentation_params)
+            flash[:success] = "Presentation updated!"
+            redirect_to presentations_path
         else
             render 'static_pages/home', status: :unprocessable_entity
         end
@@ -55,7 +54,7 @@ class PresentationsController < ApplicationController
         end 
 
         def presentation_params
-            params.require(:presentation).permit(:name, :duedate)
+            params.require(:presentation).permit(:name, :pointvalue, :duedate, :grade)
         end
 
         def assign_evaluations(presentation)

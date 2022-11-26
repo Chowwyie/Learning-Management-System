@@ -1,0 +1,28 @@
+<% if current_user %>
+    <% if current_user.admin %>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Student Email</th>
+                    <th scope="col">Total Points</th>
+                    <th scope="col">Out of Total</th>
+                    <th scope="col">Percentage Grade</th>
+                <tr>
+            </thead>
+            <tbody>
+            <% students = User.all.select {|user| !user.admin} %>
+            <% students.each do |user| %>
+                <% gradedPresentations = user.presentations.select {|presentation| presentation.grade}%>
+                <tr>
+                    <th scope="row"><%= user.name %></th>
+                    <td><%= user.email %></td>
+                    <td><%= gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade} %> </td>
+                    <td><%= gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue} %> </td>
+                    <td><%= (gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade}/gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue} * 100).round(2).to_s + "%" %></td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+    <% end %>
+<% end %>

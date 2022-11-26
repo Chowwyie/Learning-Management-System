@@ -1,5 +1,4 @@
-<%= @presentation.grade ? @presentation.grade : "Not Graded"%>
-
+<% submittedEvals = @presentation.evaluations.select {|evaluation| evaluation.submitted}%>
 <table class="table">
     <thead>
         <tr>
@@ -9,14 +8,15 @@
         <tr>
     </thead>
     <tbody>
-        <% @presentation.evaluations.each do |evaluation|%>
-            <% unless !evaluation.submitted %>
-                <tr>
-                    <th scope="row"><%= evaluation.id %></th>
-                    <td><%= evaluation.score %><td>
-                    <td><%= evaluation.evaluation %><td>
-                </tr>
-            <% end %>
+        <% submittedEvals.each do |evaluation|%>
+            <tr>
+                <th scope="row"><%= evaluation.id %></th>
+                <td><%= evaluation.score %><td>
+                <td><%= evaluation.evaluation %><td>
+            </tr>
         <% end %>
     </tbody>
 </table>
+
+<hr>
+<h2>Average Evaluation Score: <%= submittedEvals.inject(0.0) {|sum, score| sum + score} / submittedEvals.size %><h2>

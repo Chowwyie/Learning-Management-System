@@ -1,1 +1,26 @@
-<%= render 'presentation_table', presentations: @presentations %>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Presentation Team</th>
+            <th scope="col">Due</th>
+            <th scope="col">Grade</th>
+            <th scope="col">Out of</th>
+            <th scope="col">Percentage Score</th>
+        <tr>
+    </thead>
+    <tbody>
+
+    <% Presentation.all.each do |presentation| %>
+        <tr>
+            <th scope="row"><%= link_to presentation.name, presentation_path(presentation) %></th>
+            <td><%= presentation.users.map {|user| user.name}.join(', ') %></td>
+            <td><%= presentation.duedate.to_formatted_s(:short) %></td>
+            <td><%= presentation.grade ? presentation.grade : "Not Graded" %></td>
+            <td><%= presentation.pointvalue %></td>
+            <td><%= presentation.grade ? (presentation.grade/presentation.pointvalue*100).round(2).to_s + "%" : "N/A" %></td>
+            <td><a href="<%= edit_presentation_path(presentation)%>" class="btn btn-primary" role="button">Grade/Edit</a></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

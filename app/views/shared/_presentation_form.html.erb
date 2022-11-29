@@ -4,7 +4,7 @@
     <%= form_with model: @presentation do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
       <%= f.label :name, 'Presentation Name' %>
-      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Presentation name..." %>
       <%= f.label :pointvalue, 'Point value' %>
       <%= f.number_field :pointvalue, class: 'form-control' %>
       <%= f.label :duedate, 'Due Date' %>

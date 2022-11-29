@@ -43,12 +43,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   h2 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     letter-spacing: -1px;
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
-    color: #777;
+    color: rgb(0, 0, 0);
   }
   
   p {
@@ -171,7 +171,7 @@ input {
         border-width: 0.12em;
         border-color: white;
         border-style: solid;
-        font-size: 1.2em;
+        font-size: 1.15em;
         color: #bb0000;
       }
       a:active {
@@ -206,3 +206,27 @@ input {
 //   display: inline-block;
 //   margin-left: $side-navbar;
 // }
+
+/* microposts */
+
+.announcements {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+    font-size: 1em;
+  }
+  .announcement {
+    display: block;
+    font-size: 1.5em;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+  }
+}

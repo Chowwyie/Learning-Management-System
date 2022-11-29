@@ -1,12 +1,5 @@
-<div id="side-navbar">
-    <ul>
-        <li class="section">Home</li>
-        <li class="section">Annoucements</li>
-        <li class="section"><%= link_to "Grade Report", grade_report_path, class: is_active('static_pages', 'grade_report') %></li>
-        <li class="section"><%= link_to "Presentations", presentations_path, class: is_active('presentations', 'index') %></li>
-        <li class="section"><%= link_to "Make A New Presentation", new_presentation_path, class: is_active('presentations', 'new') %></li>
-        <li class="section"><%= link_to "Roster", users_path, class: is_active('users', 'index') %></li>
-    </ul>
-</div>
-<div id="side-navbar-spacer">
-</div>
+<% if current_user.admin %>
+    <%= render "shared/admin_side_nav_bar"%>
+<% else %>
+    <%= render "shared/student_side_nav_bar"%>
+<% end %> 

@@ -16,9 +16,7 @@
     <%= render 'layouts/header' %>
     <div class = "content-container">
       <% if current_user %>
-        <% if current_user.admin %>
-          <%= render 'shared/side_nav_bar' %>
-        <% end %>
+        <%= render 'shared/side_nav_bar' %>
       <% end %>
       <div class="container">
         <% flash.each do |message_type, message| %>

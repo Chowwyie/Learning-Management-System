@@ -1,0 +1,8 @@
+<h2>Make a Class Announcement</h2>
+<%= form_with(model: @announcement) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :text, placeholder: "Make an annoucement...", :cols => 80, :rows => 10 %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

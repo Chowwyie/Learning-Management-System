@@ -1,5 +1,8 @@
 class EvaluationsController < ApplicationController
     
+    def student
+    end
+
     def edit
         @evaluation = Evaluation.find(params[:id])
     end
@@ -10,7 +13,7 @@ class EvaluationsController < ApplicationController
         @evaluation.submitted = true
         if @evaluation.save
             flash[:success] = "Evaluation submitted!"
-            redirect_to root_url
+            redirect_to student_evaluation_path
         else
             render 'static_pages/home', status: :unprocessable_entity
         end

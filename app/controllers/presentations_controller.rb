@@ -1,5 +1,4 @@
 class PresentationsController < ApplicationController
-    include SessionsHelper
     def index 
         @presentations = Presentation.all
     end 
@@ -42,6 +41,9 @@ class PresentationsController < ApplicationController
 
     def show
         @presentation = Presentation.find(params[:id])
+    end 
+
+    def student
     end 
 
     def destroy

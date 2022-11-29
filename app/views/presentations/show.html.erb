@@ -19,4 +19,4 @@
 </table>
 
 <hr>
-<h2>Average Evaluation Score: <%= submittedEvals.inject(0.0) {|sum, score| sum + score} / submittedEvals.size %><h2>
+<h2>Average Evaluation Score: <%= submittedEvals.inject(0.0) {|sum, eval| sum + eval.score} / submittedEvals.size %><h2>

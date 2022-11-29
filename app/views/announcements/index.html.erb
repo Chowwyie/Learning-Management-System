@@ -1,0 +1,21 @@
+<div class="container">
+<div class="row">
+    <% if current_user.admin %>
+        <div class="col-md-4">
+            <%= render "shared/announcement_form" %>
+        </div>
+    <% end %>
+    <div class="col-md-8">
+        <ul class="announcements">
+        <% sorted_announcements = @announcements.sort { |a,b| b.created_at <=> a.created_at } %>
+        <% sorted_announcements.each do |announcement|%>
+            <li>
+                <span class="user"><%= announcement.user.name %></span>
+                <span class="announcement"><%= announcement.text %></span>
+                <span class="timestamp">Posted at <%= announcement.created_at.to_formatted_s(:short) %></span>
+            </li>
+        <% end %>
+        </ul>
+    </div>
+</div>
+</div>

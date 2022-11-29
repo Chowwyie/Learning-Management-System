@@ -4,18 +4,21 @@
             <th scope="col">Name</th>
             <th scope="col">Presentation Team</th>
             <th scope="col">Due</th>
-            <th scope="col">Submitted</th>
             <th scope="col">Grade</th>
+            <th scope="col">Out of</th>
+            <th scope="col">Percentage Score</th>
         <tr>
     </thead>
     <tbody>
-    <% presentations.each do |presentation| %>
+
+    <% current_user.presentations.all.each do |presentation| %>
         <tr>
             <th scope="row"><%= link_to presentation.name, presentation_path(presentation) %></th>
             <td><%= presentation.users.map {|user| user.name}.join(', ') %></td>
             <td><%= presentation.duedate.to_formatted_s(:short) %></td>
-            <td><%= presentation.submitted %></td>
-            <td><%= presentation.grade %></td>
+            <td><%= presentation.grade ? presentation.grade : "Not Graded" %></td>
+            <td><%= presentation.pointvalue %></td>
+            <td><%= presentation.grade ? (presentation.grade/presentation.pointvalue*100).round(2).to_s + "%" : "N/A" %></td>
         </tr>
     <% end %>
     </tbody>

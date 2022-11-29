@@ -1,0 +1,20 @@
+<% notSubmittedEvals = Evaluation.all.select {|evaluation| !evaluation.submitted}%>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Presentation Name</th>
+            <th scope="col">Presentation Team</th>
+            <th scope="col">Evaluation Due Date</th>
+        <tr>
+    </thead>
+    <tbody>
+
+    <% notSubmittedEvals.each do |evaluation| %>
+        <tr>
+            <th scope="row"><%= link_to evaluation.presentation.name, edit_evaluation_path(evaluation) %></th>
+            <td><%= evaluation.presentation.users.map {|user| user.name}.join(",") %></td>
+            <td><%= evaluation.duedate.to_formatted_s(:short) %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

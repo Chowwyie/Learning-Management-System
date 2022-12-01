@@ -1,4 +1,8 @@
 class PresentationsController < ApplicationController
+    before_action :authorize_admin?, only: [:index, :new, :create, :edit, :update]
+    before_action :authorize_student?, only: [:student]
+    before_action :authorize_user?, only: [:show]
+
     def index 
         @presentations = Presentation.all
     end 
@@ -61,9 +65,10 @@ class PresentationsController < ApplicationController
 
         def assign_evaluations(presentation)
             users = User.all
+            presentation_users_ids = presentation.users.map { |user| user.id }
             users.each do |user|
                 # if user is a student who did not present
-                if presentation.users.exclude?(user) && !user.admin
+                if presentation_users_ids.exclude?(user.id) && !user.admin
                     # automatically sends evaluations to each user due a week from the presentation date.
                     eval = Evaluation.new(presentation_id: presentation.id, user_id: user.id, duedate: presentation.duedate + 604800)
                     eval.save

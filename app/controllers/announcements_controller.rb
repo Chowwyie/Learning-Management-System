@@ -1,5 +1,6 @@
 class AnnouncementsController < ApplicationController
-    
+    before_action :authorize_admin?, only: [:create, :edit, :update]
+
     def index
         @announcements = Announcement.all
         @announcement = current_user.announcements.build()

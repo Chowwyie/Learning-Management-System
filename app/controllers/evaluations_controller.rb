@@ -1,5 +1,6 @@
 class EvaluationsController < ApplicationController
-    
+    before_action :authorize_student?
+
     def student
     end
 

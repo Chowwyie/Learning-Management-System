@@ -1,4 +1,4 @@
-<% notSubmittedEvals = Evaluation.all.select {|evaluation| !evaluation.submitted}%>
+<% notSubmittedEvals = current_user.evaluations.select {|evaluation| !evaluation.submitted}%>
 <table class="table">
     <thead>
         <tr>

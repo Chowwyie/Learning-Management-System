@@ -13,7 +13,24 @@ module SessionsHelper
         !current_user.nil?
     end
 
-    # Logs out the current user.
+    def authorize_user?
+        if !(logged_in?)
+            redirect_to root_url
+        end
+    end
+
+    def authorize_student?
+        if !(logged_in? && !current_user.admin)
+            redirect_to root_url
+        end 
+    end
+    
+    def authorize_admin?
+        if !(logged_in? && current_user.admin)
+            redirect_to root_url
+        end 
+    end
+        # Logs out the current user.
     def log_out
         reset_session
         @current_user = nil

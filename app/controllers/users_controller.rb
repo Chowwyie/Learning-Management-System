@@ -17,10 +17,18 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
-    @user = User.find(params[:id])
-    @user.update(update_params)
-    redirect_to current_user
+  def change_password
+    @user = User.find(@current_user)
+    current_password = params[:user][:current_password]
+    user = User.authenticate(@user.email, current_password)
+    if @user && user
+      user.update_attribute(password: params[:user][:current_password])
+      flash[:success] = "Password successfully changed!"
+      redirect_to user_path(@current_user)
+    else
+      flash[:danger] = "Your old password was incorrect. Please try again."
+      redirect_to user_path(@current_user)
+    end
   end
 
   private

@@ -3278,3 +3278,884 @@ Processing by PasswordsController#edit as HTML
 Completed 200 OK in 218ms (Views: 177.8ms | ActiveRecord: 2.8ms | Allocations: 12729)
 
 
+Started GET "/" for 127.0.0.1 at 2022-12-01 16:06:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8305.1ms | Allocations: 30924)
+  Rendered layouts/_shim.html.erb (Duration: 21.6ms | Allocations: 112)
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 677.7ms | Allocations: 17104)
+  Rendered layouts/_footer.html.erb (Duration: 19.9ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 11169.2ms | Allocations: 71421)
+Completed 200 OK in 11571ms (Views: 11247.9ms | ActiveRecord: 41.3ms | Allocations: 74900)
+
+
+Started GET "/password" for 127.0.0.1 at 2022-12-01 16:06:56 -0500
+Processing by PasswordsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering passwords/edit.html.erb within layouts/application
+  Rendered passwords/edit.html.erb within layouts/application (Duration: 142.4ms | Allocations: 3211)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 14)
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 14.3ms | Allocations: 843)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 499.1ms | Allocations: 11036)
+Completed 200 OK in 629ms (Views: 502.5ms | ActiveRecord: 8.8ms | Allocations: 11813)
+
+
+Started POST "/password" for 127.0.0.1 at 2022-12-01 16:07:13 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/password"):
+  
+Started GET "/password" for 127.0.0.1 at 2022-12-01 16:07:14 -0500
+Processing by PasswordsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering passwords/edit.html.erb within layouts/application
+  Rendered passwords/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2452)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 9)
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 15.1ms | Allocations: 796)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 371.5ms | Allocations: 10233)
+Completed 200 OK in 479ms (Views: 370.8ms | ActiveRecord: 7.2ms | Allocations: 10535)
+
+
+Started POST "/password" for 127.0.0.1 at 2022-12-01 16:21:56 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/password"):
+  
+Started GET "/password" for 127.0.0.1 at 2022-12-01 16:21:57 -0500
+Processing by PasswordsController#edit as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering passwords/edit.html.erb within layouts/application
+  Rendered passwords/edit.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2342)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 38.0ms | Allocations: 917)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 412.6ms | Allocations: 10038)
+Completed 200 OK in 519ms (Views: 414.3ms | ActiveRecord: 15.3ms | Allocations: 10297)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-12-01 16:22:00 -0500
+Processing by SessionsController#destroy as TURBO_STREAM
+Redirected to http://127.0.0.1:9292/
+Completed 303 See Other in 82ms (ActiveRecord: 0.0ms | Allocations: 630)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-01 16:22:01 -0500
+Processing by StaticPagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 141.9ms | Allocations: 767)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 410.8ms | Allocations: 7856)
+Completed 200 OK in 509ms (Views: 416.3ms | ActiveRecord: 0.0ms | Allocations: 8213)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-12-01 16:22:04 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 214.1ms | Allocations: 2243)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 601.6ms | Allocations: 9516)
+Completed 200 OK in 713ms (Views: 617.3ms | ActiveRecord: 0.0ms | Allocations: 10226)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-12-01 16:22:12 -0500
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"qhetrick@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qhetrick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 571)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 218.5ms | Allocations: 7543)
+Completed 422 Unprocessable Entity in 720ms (Views: 219.9ms | ActiveRecord: 6.5ms | Allocations: 8901)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-12-01 16:22:20 -0500
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"qhetrick@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qhetrick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 566)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 327.9ms | Allocations: 7534)
+Completed 422 Unprocessable Entity in 811ms (Views: 329.6ms | ActiveRecord: 6.5ms | Allocations: 8497)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-12-01 16:22:31 -0500
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"qhetrick@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qhetrick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:9292/users/1
+Completed 302 Found in 532ms (ActiveRecord: 8.0ms | Allocations: 999)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-12-01 16:22:32 -0500
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 26.8ms | Allocations: 1097)
+  [1m[36mPresentation Load (7.4ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 352.2ms | Allocations: 9834)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 226)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 629.7ms | Allocations: 17167)
+Completed 200 OK in 851ms (Views: 622.7ms | ActiveRecord: 38.9ms | Allocations: 23690)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-12-02 16:15:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:8:in `current_user'
+  Rendered layouts/_sidenav.erb (Duration: 15.7ms | Allocations: 840)
+  [1m[36mPresentation Load (4.4ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 34.6ms | Allocations: 1824)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 204)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 180.3ms | Allocations: 8973)
+Completed 200 OK in 275ms (Views: 176.5ms | ActiveRecord: 14.6ms | Allocations: 9952)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-12-03 17:54:23 -0500
+Processing by SessionsController#destroy as TURBO_STREAM
+Redirected to http://127.0.0.1:9292/
+Completed 303 See Other in 26ms (Allocations: 390)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 17:54:23 -0500
+Processing by StaticPagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 40.1ms | Allocations: 661)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 112.5ms | Allocations: 7646)
+Completed 200 OK in 130ms (Views: 114.0ms | Allocations: 7908)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 17:55:11 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 25.7ms | Allocations: 656)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 108.2ms | Allocations: 7694)
+Completed 200 OK in 127ms (Views: 109.2ms | Allocations: 7954)
+
+
+Started GET "/help" for 127.0.0.1 at 2022-12-03 17:55:14 -0500
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 12.8ms | Allocations: 158)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 63.1ms | Allocations: 7387)
+Completed 200 OK in 80ms (Views: 63.9ms | Allocations: 7723)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 17:55:16 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 23.1ms | Allocations: 658)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | Allocations: 7645)
+Completed 200 OK in 82ms (Views: 67.2ms | Allocations: 7903)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-12-03 17:55:17 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 773)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 7775)
+Completed 200 OK in 70ms (Views: 57.0ms | Allocations: 8035)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 17:56:23 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 19.0ms | Allocations: 655)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | Allocations: 7650)
+Completed 200 OK in 92ms (Views: 76.0ms | Allocations: 7908)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-12-03 17:56:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 731)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 7721)
+Completed 200 OK in 74ms (Views: 57.4ms | Allocations: 7980)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 17:56:26 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 16.4ms | Allocations: 655)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 7649)
+Completed 200 OK in 77ms (Views: 65.5ms | Allocations: 7907)
+
+
+Started GET "/signup" for 127.0.0.1 at 2022-12-03 17:56:45 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 9.9ms | Allocations: 209)
+  Rendered users/new.html.erb within layouts/application (Duration: 45.5ms | Allocations: 2222)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 127)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 102.0ms | Allocations: 9200)
+Completed 200 OK in 117ms (Views: 102.8ms | Allocations: 9540)
+
+
+Started GET "/about" for 127.0.0.1 at 2022-12-03 17:57:07 -0500
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 10.1ms | Allocations: 125)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 7276)
+Completed 200 OK in 87ms (Views: 68.2ms | Allocations: 7589)
+
+
+Started GET "/contact" for 127.0.0.1 at 2022-12-03 17:57:11 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 9.0ms | Allocations: 116)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 65.1ms | Allocations: 7279)
+Completed 200 OK in 86ms (Views: 66.0ms | Allocations: 7591)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-12-03 17:57:49 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 731)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 70.6ms | Allocations: 7709)
+Completed 200 OK in 89ms (Views: 71.4ms | Allocations: 7967)
+
+
+Started GET "/signup" for 127.0.0.1 at 2022-12-03 17:57:52 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1301)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 59.4ms | Allocations: 8274)
+Completed 200 OK in 77ms (Views: 60.3ms | Allocations: 8548)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:17:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3830.0ms | Allocations: 83337)
+  Rendered layouts/_shim.html.erb (Duration: 8.6ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 18.7ms | Allocations: 457)
+  Rendered layouts/_footer.html.erb (Duration: 10.1ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 4111.1ms | Allocations: 107237)
+Completed 200 OK in 4217ms (Views: 4138.8ms | ActiveRecord: 0.0ms | Allocations: 110708)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:18:35 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 275)
+  Rendered layouts/_shim.html.erb (Duration: 4.9ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 5.8ms | Allocations: 438)
+  Rendered layouts/_footer.html.erb (Duration: 3.8ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 136.1ms | Allocations: 8953)
+Completed 200 OK in 165ms (Views: 145.8ms | ActiveRecord: 0.0ms | Allocations: 9845)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:19:42 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1093.0ms | Allocations: 47092)
+Completed 200 OK in 1111ms (Views: 1093.8ms | ActiveRecord: 0.0ms | Allocations: 47377)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:21:39 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1076.7ms | Allocations: 46934)
+Completed 200 OK in 1092ms (Views: 1077.5ms | ActiveRecord: 0.0ms | Allocations: 47193)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:23:08 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1001.6ms | Allocations: 46865)
+Completed 200 OK in 1017ms (Views: 1002.7ms | ActiveRecord: 0.0ms | Allocations: 47128)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:29:34 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 977.6ms | Allocations: 45359)
+Completed 200 OK in 999ms (Views: 978.4ms | Allocations: 45615)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:29:59 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1018.1ms | Allocations: 45394)
+Completed 200 OK in 1031ms (Views: 1018.9ms | Allocations: 45650)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:30:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.9ms | Allocations: 581)
+  Rendered layouts/_shim.html.erb (Duration: 3.6ms | Allocations: 112)
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | Allocations: 457)
+  Rendered layouts/_footer.html.erb (Duration: 5.2ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 2457.0ms | Allocations: 68566)
+Completed 200 OK in 2509ms (Views: 2471.6ms | ActiveRecord: 0.0ms | Allocations: 72038)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:30:57 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 90)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1016.2ms | Allocations: 46040)
+Completed 200 OK in 1033ms (Views: 1017.6ms | ActiveRecord: 0.0ms | Allocations: 46365)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-03 18:30:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:32:52 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 86)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 951.7ms | Allocations: 45690)
+Completed 200 OK in 967ms (Views: 952.7ms | ActiveRecord: 0.0ms | Allocations: 45994)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-03 18:32:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:34:27 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1005.0ms | Allocations: 45355)
+Completed 200 OK in 1017ms (Views: 1006.0ms | ActiveRecord: 0.0ms | Allocations: 45614)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-03 18:34:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:39:14 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 7139)
+Completed 200 OK in 78ms (Views: 63.4ms | Allocations: 7400)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-03 18:39:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:41:46 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1099.3ms | Allocations: 45366)
+Completed 200 OK in 1117ms (Views: 1100.4ms | Allocations: 45622)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:42:37 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1292.1ms | Allocations: 46807)
+Completed 200 OK in 1309ms (Views: 1293.4ms | Allocations: 47063)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:43:44 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1038.3ms | Allocations: 46496)
+Completed 200 OK in 1052ms (Views: 1039.1ms | Allocations: 46753)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:48:34 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 84.2ms | Allocations: 7460)
+Completed 200 OK in 98ms (Views: 85.5ms | Allocations: 7721)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:48:45 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1232.1ms | Allocations: 46541)
+Completed 200 OK in 1256ms (Views: 1232.9ms | Allocations: 46797)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 18:54:25 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 84.2ms | Allocations: 7446)
+Completed 200 OK in 98ms (Views: 85.1ms | Allocations: 7705)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:03:02 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 344)
+  Rendered layouts/_shim.html.erb (Duration: 9.8ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 14.0ms | Allocations: 436)
+  Rendered layouts/_footer.html.erb (Duration: 10.9ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 1044.2ms | Allocations: 48376)
+Completed 200 OK in 1067ms (Views: 1049.9ms | Allocations: 49190)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-12-03 19:03:31 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 94.5ms | Allocations: 2595)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 156.1ms | Allocations: 10016)
+Completed 200 OK in 173ms (Views: 160.2ms | Allocations: 10780)
+
+
+Started GET "/signup" for 127.0.0.1 at 2022-12-03 19:03:35 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 13.1ms | Allocations: 211)
+  Rendered users/new.html.erb within layouts/application (Duration: 40.9ms | Allocations: 2462)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 150)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 115.8ms | Allocations: 9906)
+Completed 200 OK in 222ms (Views: 120.6ms | ActiveRecord: 6.5ms | Allocations: 18897)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:05:15 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 336)
+  Rendered layouts/_shim.html.erb (Duration: 3.8ms | Allocations: 108)
+  Rendered layouts/_header.html.erb (Duration: 4.9ms | Allocations: 436)
+  Rendered layouts/_footer.html.erb (Duration: 3.5ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 1136.4ms | Allocations: 48365)
+Completed 200 OK in 1163ms (Views: 1145.7ms | ActiveRecord: 0.0ms | Allocations: 49213)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:05:59 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1015.6ms | Allocations: 46621)
+Completed 200 OK in 1033ms (Views: 1016.8ms | ActiveRecord: 0.0ms | Allocations: 46899)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:08:29 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 897.2ms | Allocations: 31079)
+Completed 500 Internal Server Error in 916ms (ActiveRecord: 0.0ms | Allocations: 31335)
+
+
+  
+ActionView::Template::Error (Error: wrong number of arguments (4 for 3) for `rgb'
+        on line 195:14 of app/assets/stylesheets/custom.scss
+>>   background:rgb(194, 194, 194, 0.5)
+
+   -------------^
+):
+     7:     <%= csrf_meta_tags %>
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= render 'layouts/shim' %>
+    12:     <%= javascript_importmap_tags %>
+    13:   </head>
+  
+app/assets/stylesheets/custom.scss:195
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:08:46 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 811.1ms | Allocations: 31047)
+Completed 500 Internal Server Error in 823ms (ActiveRecord: 0.0ms | Allocations: 31281)
+
+
+  
+ActionView::Template::Error (Error: wrong number of arguments (4 for 3) for `rgb'
+        on line 195:14 of app/assets/stylesheets/custom.scss
+>>   background:rgb(194, 194, 194, .5)
+
+   -------------^
+):
+     7:     <%= csrf_meta_tags %>
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= render 'layouts/shim' %>
+    12:     <%= javascript_importmap_tags %>
+    13:   </head>
+  
+app/assets/stylesheets/custom.scss:195
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:09:08 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 938.0ms | Allocations: 46657)
+Completed 200 OK in 952ms (Views: 938.7ms | ActiveRecord: 0.0ms | Allocations: 46916)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:13:00 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1108.4ms | Allocations: 46626)
+Completed 200 OK in 1122ms (Views: 1109.4ms | Allocations: 46882)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:16:31 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1075.2ms | Allocations: 46629)
+Completed 200 OK in 1093ms (Views: 1076.2ms | Allocations: 46885)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:16:57 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1060.7ms | Allocations: 46609)
+Completed 200 OK in 1078ms (Views: 1061.9ms | Allocations: 46865)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:17:32 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 986.5ms | Allocations: 46645)
+Completed 200 OK in 1002ms (Views: 987.7ms | Allocations: 46901)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:18:51 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 985.9ms | Allocations: 46621)
+Completed 200 OK in 1004ms (Views: 986.8ms | Allocations: 46877)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:23:07 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.2ms | Allocations: 340)
+  Rendered layouts/_shim.html.erb (Duration: 3.3ms | Allocations: 103)
+  Rendered layouts/_header.html.erb (Duration: 4.3ms | Allocations: 437)
+  Rendered layouts/_footer.html.erb (Duration: 4.0ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 1150.8ms | Allocations: 48366)
+Completed 200 OK in 1172ms (Views: 1158.3ms | Allocations: 49180)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:25:31 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1110.2ms | Allocations: 45752)
+Completed 200 OK in 1123ms (Views: 1111.0ms | Allocations: 46026)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-03 19:25:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:26:13 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 984.6ms | Allocations: 45645)
+Completed 200 OK in 998ms (Views: 985.4ms | Allocations: 45901)
+
+
+Started GET "/images/oval.jpg" for 127.0.0.1 at 2022-12-03 19:26:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:27:29 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 988.0ms | Allocations: 46189)
+Completed 200 OK in 1002ms (Views: 988.9ms | Allocations: 46445)
+
+
+Started GET "/images/oval.jpg" for 127.0.0.1 at 2022-12-03 19:27:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:29:12 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 1050.3ms | Allocations: 46792)
+Completed 200 OK in 1071ms (Views: 1051.3ms | Allocations: 47048)
+
+
+Started GET "/images/oval.jpg" for 127.0.0.1 at 2022-12-03 19:29:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:30:10 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 998.4ms | Allocations: 45984)
+Completed 200 OK in 1011ms (Views: 999.3ms | Allocations: 46240)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-03 19:30:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:32:10 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 80.2ms | Allocations: 7291)
+Completed 200 OK in 91ms (Views: 80.9ms | Allocations: 7547)
+
+
+Started GET "/images/oval.jpg" for 127.0.0.1 at 2022-12-03 19:32:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-03 19:38:06 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 7300)
+Completed 200 OK in 94ms (Views: 81.4ms | Allocations: 7557)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-03 19:38:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  

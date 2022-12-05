@@ -4159,3 +4159,320 @@ Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-03 19:38:06 -
   
 ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
   
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:21:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 704)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 100)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 441)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 726.4ms | Allocations: 159568)
+Completed 200 OK in 737ms (Views: 730.3ms | ActiveRecord: 0.0ms | Allocations: 163877)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:21:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:43:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 506)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 185.3ms | Allocations: 53748)
+Completed 200 OK in 194ms (Views: 187.6ms | ActiveRecord: 0.0ms | Allocations: 56827)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:43:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:43:58 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 319)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 485)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8767)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 9593)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:43:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/help" for 127.0.0.1 at 2022-12-05 15:44:01 -0500
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 7303)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 7646)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:44:02 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 7271)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 7532)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:44:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 127.7ms | Allocations: 53756)
+Completed 200 OK in 131ms (Views: 129.0ms | ActiveRecord: 0.0ms | Allocations: 56835)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:44:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:44:55 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8.9ms | Allocations: 319)
+  Rendered layouts/_shim.html.erb (Duration: 1.1ms | Allocations: 87)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 486)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 8780)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 9606)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:44:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:46:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 444)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 129.2ms | Allocations: 53432)
+Completed 200 OK in 136ms (Views: 133.3ms | ActiveRecord: 0.0ms | Allocations: 56511)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:46:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:47:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 441)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 133.5ms | Allocations: 53593)
+Completed 200 OK in 140ms (Views: 135.3ms | ActiveRecord: 0.0ms | Allocations: 56672)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:47:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:49:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 446)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 126.1ms | Allocations: 53728)
+Completed 200 OK in 130ms (Views: 127.8ms | ActiveRecord: 0.0ms | Allocations: 56807)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:49:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:50:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 447)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 137.3ms | Allocations: 53593)
+Completed 200 OK in 143ms (Views: 140.6ms | ActiveRecord: 0.0ms | Allocations: 56672)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:50:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:51:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 447)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 129.7ms | Allocations: 53545)
+Completed 200 OK in 138ms (Views: 131.7ms | ActiveRecord: 0.0ms | Allocations: 56624)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:51:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 15:59:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 449)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 131.9ms | Allocations: 53447)
+Completed 200 OK in 138ms (Views: 134.6ms | ActiveRecord: 0.0ms | Allocations: 56526)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 15:59:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:10:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 100)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 454)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 158.2ms | Allocations: 53564)
+Completed 200 OK in 164ms (Views: 161.1ms | ActiveRecord: 0.0ms | Allocations: 56643)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:10:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:13:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 100)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 454)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 129.5ms | Allocations: 53396)
+Completed 200 OK in 134ms (Views: 131.0ms | ActiveRecord: 0.0ms | Allocations: 56475)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:13:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:13:31 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 319)
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 88)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 433)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 8737)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 9564)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:13:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:14:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 454)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 125.7ms | Allocations: 53335)
+Completed 200 OK in 131ms (Views: 127.4ms | ActiveRecord: 0.0ms | Allocations: 56414)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:14:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:15:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 596)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 455)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 125.5ms | Allocations: 53442)
+Completed 200 OK in 131ms (Views: 127.4ms | ActiveRecord: 0.0ms | Allocations: 56521)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:15:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:15:31 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 124)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 7466)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 7775)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-12-05 16:15:35 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 4087)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 14)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 137)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 11345)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 12103)
+
+

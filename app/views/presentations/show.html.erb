@@ -1,3 +1,4 @@
+<%# changes nav path %>
 <% if current_user.admin %>
     <% parent_link = 'Presentations'%>
 <% else %>
@@ -23,6 +24,7 @@
         <% end %>
         <tr class="aggregate-row">
             <td>Average Score</td>
+            <%# aggregates average score with nan catch %>
             <% average_score = (submittedEvals.inject(0.0) {|sum, eval| sum + eval.score} / submittedEvals.size).round(2) %>
             <td><%= !average_score.nan? ? average_score : "N/A" %></td>
             <td></td>

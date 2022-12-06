@@ -14,6 +14,7 @@
     </thead>
     <tbody>
 
+    <%# iterates through graded presentations %>
     <% gradedPresentations = current_user.presentations.select {|presentation| presentation.grade}%>
     <% current_user.presentations.all.each do |presentation| %>
         <tr>
@@ -22,6 +23,7 @@
             <td><%= presentation.duedate.to_formatted_s(:short) %></td>
             <td><%= presentation.grade ? presentation.grade : "Not Graded" %></td>
             <td><%= presentation.pointvalue %></td>
+            <%# individual presentation aggregatations %>
             <% grade_percent = presentation.grade ? (presentation.grade/presentation.pointvalue*100).round(2) : nil %>
             <td><%= grade_percent ? grade_percent.to_s + "%" : "N/A" %></td>
             <td><%= render "shared/letter_grade", grade: grade_percent %></td>
@@ -33,9 +35,12 @@
         <td></td>
         <td></td>
         <td></td>
+        <%# aggregates total score %>
         <td><%=gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade}.to_s + '/' +  gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue}.to_s %></td>
+        <%# aggregates total course grade %>
         <% grade_percent = (gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade}/gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue} * 100).round(2) %>
         <td><%= grade_percent.to_s + "%" %></td>
+        <%# calculates letter grade %>
         <td><%= render "shared/letter_grade", grade: grade_percent %></td>
         <td></td>
     </tr>

@@ -1,3 +1,4 @@
+<%# navbar styling %>
 <% provide(:nav_path, (render 'layouts/course_path', nav_path: ['Manage Overdue Evaluations'])) %>
 <table class="table table-striped">
     <thead>
@@ -9,6 +10,7 @@
         </tr>
     </thead>
     <tbody>
+    <%# iterate through all evaluations, filtering by late and not submitted. %>
     <% Evaluation.all.filter {|evaluation| !evaluation.submitted && (DateTime.now() > evaluation.duedate)}.sort_by(&:duedate).each do |evaluation| %>
         <tr>
             <th scope="row"><%= evaluation.user.name %></th>

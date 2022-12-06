@@ -9,6 +9,7 @@
         </tr>
     </thead>
     <tbody>
+    <%# iterates through user, sorts by name %>
     <% User.all.sort_by(&:name).each do |user| %>
         <tr>
             <% if user.admin %>
@@ -18,6 +19,7 @@
             <% end %>
             <td><%= user.email %></td>
             <td><%= user.admin %></td>
+            <%# allows drop priviledge based on user status %>
             <% if current_user.admin %>
                 <% if !user.admin %>
                     <td><%= link_to "Make Admin", user, data: { "turbo-method": :patch, turbo_confirm: "Would you like to make #{user.name} an admin?" }, class: "btn btn-primary"   %></td>
@@ -27,6 +29,7 @@
                     <td></td>
                 <% end %>
             <% end %>
+            <%# students can drop themselves %>
             <% if !current_user.admin %>
                 <% if user.id == current_user.id %>
                     <td><%= link_to "Drop", user, data: { "turbo-method": :delete, turbo_confirm: "Would you like to drop yourself?"}, class: "btn btn-danger"   %></td>

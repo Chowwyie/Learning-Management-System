@@ -1,6 +1,8 @@
+<%# navbar styling %>
 <% provide(:nav_path, (render 'layouts/course_path', nav_path: ['Presentations', 'Grade ' + @presentation.name])) %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <%# modifies existing presentation%>
     <%= form_with model: @presentation do |f| %>
         <%= f.label :name, 'Change Presentation Name' %>
         <%= f.text_field :name, class: 'form-control' %>

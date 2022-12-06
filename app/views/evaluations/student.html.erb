@@ -1,3 +1,4 @@
+<%# navbar styling %>
 <% provide(:nav_path, (render 'layouts/course_path', nav_path: ['To-Do Evaluations'])) %>
 <% notSubmittedEvals = current_user.evaluations.select {|evaluation| !evaluation.submitted}%>
 <table class="table">
@@ -10,10 +11,11 @@
         </tr>
     </thead>
     <tbody>
-
+    <%# iterate through all not submitted evals %>
     <% notSubmittedEvals.each do |evaluation| %>
         <tr>
             <th scope="row"><%=evaluation.presentation.name%></th>
+            <%# convert into string %>
             <td><%= evaluation.presentation.users.map {|user| user.name}.join(",") %></td>
             <td><%= evaluation.duedate.to_formatted_s(:short) %></td>
             <td><a href="<%= edit_evaluation_path(evaluation)%>" class="btn btn-info" role="button">Submit Evaluation</a><td>

@@ -9,6 +9,7 @@
         </tr>
     </thead>
     <tbody>
+    <%# iterate through presentations %>
     <% presentations.each do |presentation| %>
         <tr>
             <th scope="row"><%= link_to presentation.name, presentation_path(presentation) %></th>

@@ -1,16 +1,1 @@
-<%= render 'layouts/sidenav' %>
-<div class='content'>
-    Your profile: <%= @user.name %>, <%= @user.email %>
-    <h1>To-do Presentations:</h1>
-    <% @user.presentations.each do |p| %>
-        <% if !p.submitted %>
-            <%= p.name %>
-        <% end %>
-    <% end %>
-    <h1>Completed Presentations:</h1>
-    <% @user.presentations.each do |p| %>
-        <% if p.submitted %>
-            <%= p.name %>
-        <% end %>
-    <% end %>
-</div>
+

@@ -49,5 +49,4 @@ class UsersController < ApplicationController
     def authorized?
       @user.admin
     end
-
 end

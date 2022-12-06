@@ -1,0 +1,28 @@
+<% provide(:title, 'People') %>
+<h1>People</h1>
+
+<%= render 'layouts/sidenav' %>
+<div class='content'>
+    <h3>Instructors</h3>
+    <hr>
+    <% User.all.each do |u| %>
+        <% if u.admin %>
+            <%= u.name %>
+            <br>
+            <%= u.email %>
+            <br>
+            <br>
+        <% end %>
+    <% end %>
+    <h3>Students</h3>
+    <hr>
+    <% User.all.each do |u| %>
+        <% if !u.admin %>
+            <%= u.name %>
+            <br>
+            <%= u.email %>
+            <br>
+            <br>
+        <% end %>
+    <% end %>
+</div>

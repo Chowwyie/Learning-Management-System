@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_many :evaluations
-    has_many :teams
+    has_many :evaluations, dependent: :delete_all
+    has_many :teams, dependent: :delete_all
     has_many :presentations, through: :teams
     has_many :announcements
     before_save { self.email = email.downcase }

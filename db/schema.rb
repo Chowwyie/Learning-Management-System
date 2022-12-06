@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_26_000315) do
   end
 
   create_table "evaluations", force: :cascade do |t|
-    t.integer "score"
+    t.integer "score", default: 0
     t.text "evaluation"
     t.boolean "submitted", default: false
     t.datetime "duedate"

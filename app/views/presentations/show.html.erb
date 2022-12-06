@@ -1,3 +1,9 @@
+<% if current_user.admin %>
+    <% parent_link = 'Presentations'%>
+<% else %>
+    <% parent_link = 'Grade Report'%>
+<% end %>
+<% provide(:nav_path, (render 'layouts/course_path', nav_path: [parent_link, 'Evaluations for ' + @presentation.name])) %>
 <% submittedEvals = @presentation.evaluations.select {|evaluation| evaluation.submitted}%>
 <table class="table">
     <thead>
@@ -15,8 +21,11 @@
                 <td><%= evaluation.evaluation %><td>
             </tr>
         <% end %>
+        <tr class="aggregate-row">
+        <td>Average Score</td>
+            <% average_score = (submittedEvals.inject(0.0) {|sum, eval| sum + eval.score} / submittedEvals.size).round(2) %>
+            <td><%= !average_score.nan? ? average_score : "N/A" %></td>
+        </tr>
     </tbody>
 </table>
 
-<hr>
-<h2>Average Evaluation Score: <%= submittedEvals.inject(0.0) {|sum, eval| sum + eval.score} / submittedEvals.size %><h2>

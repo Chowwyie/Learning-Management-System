@@ -1,5 +1,7 @@
 class AnnouncementsController < ApplicationController
     before_action :authorize_admin?, only: [:create, :edit, :update]
+    before_action :authorize_user?, only: [:index]
+    layout "dashboard"
 
     def index
         @announcements = Announcement.all
@@ -12,8 +14,8 @@ class AnnouncementsController < ApplicationController
             flash[:success] = "Announcement created!"
             redirect_to announcements_path
         else
-            @user = current_user
-            render 'static_pages/home', status: :unprocessable_entity
+            flash[:danger] = "Can't have a blank announcement."
+            redirect_to announcements_path, status: :unprocessable_entity
         end
     end
 
@@ -32,6 +34,12 @@ class AnnouncementsController < ApplicationController
         end
     end
 
+    def destroy
+        Announcement.find(params[:id]).destroy
+        flash[:success] = "Annoucement Erased"
+        redirect_to announcements_path
+    end
+    
     private
         def announcement_params
             params.require(:announcement).permit(:text)

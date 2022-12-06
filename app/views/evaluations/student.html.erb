@@ -1,3 +1,4 @@
+<% provide(:nav_path, (render 'layouts/course_path', nav_path: ['To-Do Evaluations'])) %>
 <% notSubmittedEvals = current_user.evaluations.select {|evaluation| !evaluation.submitted}%>
 <table class="table">
     <thead>
@@ -11,9 +12,10 @@
 
     <% notSubmittedEvals.each do |evaluation| %>
         <tr>
-            <th scope="row"><%= link_to evaluation.presentation.name, edit_evaluation_path(evaluation) %></th>
+            <th scope="row"><%=evaluation.presentation.name%></th>
             <td><%= evaluation.presentation.users.map {|user| user.name}.join(",") %></td>
             <td><%= evaluation.duedate.to_formatted_s(:short) %></td>
+            <td><a href="<%= edit_evaluation_path(evaluation)%>" class="btn btn-info" role="button">Submit Evaluation</a><td>
         </tr>
     <% end %>
     </tbody>

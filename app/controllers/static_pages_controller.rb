@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   before_action :authorize_admin?, only: [:gradebook]
+  layout "dashboard", only: [:gradebook]
 
   def home
   end

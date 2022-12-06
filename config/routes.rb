@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "student_evaluation", to: "evaluations#student"
   resources :users
   resources :presentations, only: [:index, :new, :show, :create, :destroy, :edit, :update, :student]
-  resources :evaluations, only: [:edit, :update]
+  resources :evaluations, only: [:index, :edit, :update]
   resources :announcements, only: [:index, :new, :show, :create, :destroy, :edit, :update]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -4,6 +4,7 @@
         <li class="section"><%= link_to "Grade Book", gradebook_path, class: is_active('static_pages', 'gradebook') %></li>
         <li class="section"><%= link_to "Presentations", presentations_path, class: is_active('presentations', 'index') %></li>
         <li class="section"><%= link_to "Make A New Presentation", new_presentation_path, class: is_active('presentations', 'new') %></li>
+        <li class="section"><%= link_to "Manage Overdue Evaluations", evaluations_path, class: is_active('evaluations', 'index') %></li>
         <li class="section"><%= link_to "Roster", users_path, class: is_active('users', 'index') %></li>
     </ul>
 </div>

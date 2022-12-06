@@ -2,6 +2,7 @@ class PresentationsController < ApplicationController
     before_action :authorize_admin?, only: [:index, :new, :create, :edit, :update]
     before_action :authorize_student?, only: [:student]
     before_action :authorize_user?, only: [:show]
+    layout "dashboard"
 
     def index 
         @presentations = Presentation.all
@@ -51,6 +52,10 @@ class PresentationsController < ApplicationController
     end 
 
     def destroy
+        name = Presentation.find(params[:id]).name
+        Presentation.find(params[:id]).destroy
+        flash[:success] = "Presentation #{name} deleted"
+        redirect_to presentations_path
     end
 
     private

@@ -1,5 +1,7 @@
-<% if current_user.admin %>
-    <%= render "shared/admin_side_nav_bar"%>
-<% else %>
-    <%= render "shared/student_side_nav_bar"%>
+<% if current_user %>
+    <% if current_user.admin %>
+        <%= render "shared/admin_side_nav_bar"%>
+    <% else %>
+        <%= render "shared/student_side_nav_bar"%>
+    <% end %> 
 <% end %> 

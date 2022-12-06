@@ -12,6 +12,7 @@
             </a>
             <ul id="dropdown-menu" class="dropdown-menu">
               <li>
+                <%= link_to "Dashboard", announcements_path%>
                 <%= link_to "Log out", logout_path,
                                        data: { "turbo-method": :delete } %>
               </li>

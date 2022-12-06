@@ -1,3 +1,4 @@
+<% provide(:nav_path, (render 'layouts/course_path', nav_path: ['Grade Report'])) %>
 <table class="table">
     <thead>
         <tr>
@@ -7,19 +8,34 @@
             <th scope="col">Grade</th>
             <th scope="col">Out of</th>
             <th scope="col">Percentage Score</th>
+            <th scope="col">Letter Grade</th>
         <tr>
     </thead>
     <tbody>
 
+    <% gradedPresentations = current_user.presentations.select {|presentation| presentation.grade}%>
     <% current_user.presentations.all.each do |presentation| %>
         <tr>
-            <th scope="row"><%= link_to presentation.name, presentation_path(presentation) %></th>
+            <th scope="row"><%=presentation.name%></th>
             <td><%= presentation.users.map {|user| user.name}.join(', ') %></td>
             <td><%= presentation.duedate.to_formatted_s(:short) %></td>
             <td><%= presentation.grade ? presentation.grade : "Not Graded" %></td>
             <td><%= presentation.pointvalue %></td>
-            <td><%= presentation.grade ? (presentation.grade/presentation.pointvalue*100).round(2).to_s + "%" : "N/A" %></td>
+            <% grade_percent = presentation.grade ? (presentation.grade/presentation.pointvalue*100).round(2) : nil %>
+            <td><%= grade_percent ? grade_percent.to_s + "%" : "N/A" %></td>
+            <td><%= render "shared/letter_grade", grade: grade_percent %></td>
+            <td><a href="<%= presentation_path(presentation)%>" class="btn btn-info" role="button">Show Evaluations</a></td>
         </tr>
     <% end %>
+    <tr class="aggregate-row">
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><%=gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade}.to_s + '/' +  gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue}.to_s %></td>
+        <% grade_percent = (gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade}/gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue} * 100).round(2) %>
+        <td><%= grade_percent.to_s + "%" %></td>
+        <td><%= render "shared/letter_grade", grade: grade_percent %></td>
+    </tr>
     </tbody>
 </table>

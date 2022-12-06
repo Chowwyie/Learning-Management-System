@@ -1,1 +1,14 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+charlie:
+  name: Charlie Test
+  email: charlie@test.org
+  admin: true
+
+eddie:
+  name: Eddie Test
+  email: eddie@test.org
+
+alan:
+  name: Alan Test
+  email: alan@test.org  

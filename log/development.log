@@ -4476,3 +4476,369 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 12103)
 
 
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:17:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 454)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 122.3ms | Allocations: 53581)
+Completed 200 OK in 129ms (Views: 126.1ms | ActiveRecord: 0.0ms | Allocations: 56660)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:17:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:19:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 457)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 107.6ms | Allocations: 53600)
+Completed 200 OK in 112ms (Views: 109.1ms | ActiveRecord: 0.0ms | Allocations: 56679)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:19:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:19:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 458)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 141.0ms | Allocations: 53526)
+Completed 200 OK in 148ms (Views: 142.9ms | ActiveRecord: 0.0ms | Allocations: 56605)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:19:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:20:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 457)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 179.6ms | Allocations: 53698)
+Completed 200 OK in 185ms (Views: 181.5ms | ActiveRecord: 0.0ms | Allocations: 56777)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:20:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221117175522)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221117175522"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddIndexToUsersEmail (20221119044947)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119044947"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPasswordDigestToUsers (20221119053222)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119053222"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePresentations (20221119223451)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "presentations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "submitted" boolean DEFAULT 0, "grade" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119223451"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvaluations (20221119223938)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "score" integer, "evaluation" text, "submitted" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119223938"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeysToEvaluation (20221119224911)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "evaluations" ADD "presentation_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_presentation_id" ON "aevaluations" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id" FROM "evaluations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_43d2c5add4"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id" FROM "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "evaluations" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_user_id" ON "evaluations" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_user_id" ON "aevaluations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevaluations_on_presentation_id" ON "aevaluations" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aevaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id" FROM "evaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "evaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "evaluations" ("id" integer NOT NULL PRIMARY KEY, "score" integer DEFAULT NULL, "evaluation" text DEFAULT NULL, "submitted" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_43d2c5add4"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+, CONSTRAINT "fk_rails_ef42eba623"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_presentation_id" ON "evaluations" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_evaluations_on_user_id" ON "evaluations" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "evaluations" ("id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","score","evaluation","submitted","created_at","updated_at","presentation_id","user_id" FROM "aevaluations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevaluations"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221119224911"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTeams (20221120010757)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221120010757"]]
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeyToTeam (20221120010930)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "teams" ADD "presentation_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_presentation_id" ON "ateams" ("presentation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ateams" ("id","created_at","updated_at","presentation_id")
+                     SELECT "id","created_at","updated_at","presentation_id" FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_2e95ef4bd5"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "teams" ("id","created_at","updated_at","presentation_id")
+                     SELECT "id","created_at","updated_at","presentation_id" FROM "ateams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "teams" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_teams_on_user_id" ON "teams" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_user_id" ON "ateams" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_ateams_on_presentation_id" ON "ateams" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "ateams" ("id","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","created_at","updated_at","presentation_id","user_id" FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "teams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "presentation_id" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_2e95ef4bd5"
+FOREIGN KEY ("presentation_id")
+  REFERENCES "presentations" ("id")
+, CONSTRAINT "fk_rails_45096701b6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_teams_on_presentation_id" ON "teams" ("presentation_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_teams_on_user_id" ON "teams" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "teams" ("id","created_at","updated_at","presentation_id","user_id")
+                     SELECT "id","created_at","updated_at","presentation_id","user_id" FROM "ateams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ateams"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221120010930"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAdminToUsers (20221121163341)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221121163341"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-05 21:27:12.556370"], ["updated_at", "2022-12-05 21:27:12.556370"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "charlie@test.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Charlie Test"], ["email", "charlie@test.org"], ["created_at", "2022-12-05 21:27:18.043909"], ["updated_at", "2022-12-05 21:27:18.043909"], ["password_digest", "[FILTERED]"], ["admin", 1]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "eddie@test.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Eddie Test"], ["email", "eddie@test.org"], ["created_at", "2022-12-05 21:27:18.224395"], ["updated_at", "2022-12-05 21:27:18.224395"], ["password_digest", "[FILTERED]"], ["admin", nil]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-12-05 16:27:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 457)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 141.2ms | Allocations: 53634)
+Completed 200 OK in 146ms (Views: 143.3ms | ActiveRecord: 0.0ms | Allocations: 56713)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 16:27:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/signup" for 127.0.0.1 at 2022-12-05 16:27:26 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3718)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 10986)
+Completed 200 OK in 29ms (Views: 14.4ms | ActiveRecord: 0.6ms | Allocations: 19203)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-12-05 16:27:42 -0500
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Quinnan", "email"=>"quinnan@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "quinnan@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Quinnan"], ["email", "quinnan@email.com"], ["created_at", "2022-12-05 21:27:42.847271"], ["updated_at", "2022-12-05 21:27:42.847271"], ["password_digest", "[FILTERED]"], ["admin", nil]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:9292/users/3
+Completed 302 Found in 191ms (ActiveRecord: 8.4ms | Allocations: 7043)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-12-05 16:27:42 -0500
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 2.0ms | Allocations: 1053)
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" INNER JOIN "teams" ON "presentations"."id" = "teams"."presentation_id" WHERE "teams"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 26.4ms | Allocations: 13080)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 131)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 20118)
+Completed 200 OK in 39ms (Views: 33.2ms | ActiveRecord: 0.7ms | Allocations: 25908)
+
+
+Started GET "/people" for 127.0.0.1 at 2022-12-05 16:27:46 -0500
+Processing by UsersController#people as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/people.html.erb within layouts/application
+  Rendered layouts/_sidenav.erb (Duration: 0.5ms | Allocations: 337)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/people.html.erb:19
+  Rendered users/people.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1955)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 8942)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.1ms | Allocations: 9240)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-05 17:11:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 457)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 134.1ms | Allocations: 53660)
+Completed 200 OK in 138ms (Views: 135.5ms | ActiveRecord: 0.0ms | Allocations: 56739)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 17:11:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/login" for 127.0.0.1 at 2022-12-05 17:12:24 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2458)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 137)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 9646)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 10404)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-05 22:23:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 454)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 167.9ms | Allocations: 53814)
+Completed 200 OK in 181ms (Views: 171.0ms | ActiveRecord: 0.0ms | Allocations: 56893)
+
+
+Started GET "/app/assets/images/oval.jpg" for 127.0.0.1 at 2022-12-05 22:23:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/oval.jpg"):
+  
+Started GET "/help" for 127.0.0.1 at 2022-12-05 22:23:46 -0500
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 7480)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 7843)
+
+

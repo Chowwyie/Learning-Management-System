@@ -4,7 +4,7 @@
 # User that controls all user related manipulations and functions
 class UsersController < ApplicationController
   before_action :authorize_user?, only: [:index]
-  before_action :authorize_admin? only: [:edit]
+  before_action :authorize_admin?, only: [:edit]
   layout 'dashboard', except: [:new]
 
   def index; end

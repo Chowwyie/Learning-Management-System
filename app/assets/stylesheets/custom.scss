@@ -205,12 +205,7 @@ input {
   
 }
 
-/* keeps spacing */
-#side-navbar-spacer {
-  display: block;
-  width: $side-navbar;
-  height: 100%;
-}
+
 
 
 .content-container {
@@ -352,6 +347,10 @@ input {
       font-weight: 100;
     }
   }
+}
+
+.container {
+  margin-left: $side-navbar + 2em;
 }
 
 hr.course-divider {

@@ -3,6 +3,8 @@
 one:
   score: 1
   evaluation: MyText
+  user: eddie
+  presentation: one
 
 two:
   score: 1

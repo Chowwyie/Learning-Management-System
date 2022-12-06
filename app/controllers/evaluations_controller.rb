@@ -9,6 +9,8 @@ class EvaluationsController < ApplicationController
 
   def index; end
 
+  ##
+  # Renders student view of evaluations.
   def student; end
 
   def edit
@@ -16,6 +18,7 @@ class EvaluationsController < ApplicationController
   end
 
   def update
+    # finds the evaluation to modify, updates it with params
     @evaluation = Evaluation.find(params[:id])
     @evaluation.update(eval_params)
     @evaluation.submitted = true
@@ -36,6 +39,10 @@ class EvaluationsController < ApplicationController
 
   private
 
+  ##
+  # Permits only score and evaluation to prevent security issues
+  #
+  # Ensures: params only permit score and evaluation
   def eval_params
     params.require(:evaluation).permit(:score, :evaluation)
   end

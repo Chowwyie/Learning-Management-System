@@ -7,7 +7,9 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
+    # case-insensitive
     user = User.find_by(email: params[:session][:email].downcase)
+    # autheticates user
     if user&.authenticate(params[:session][:password])
       start_session(user)
     else
@@ -17,12 +19,14 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    # ends session
     log_out
     redirect_to root_url, status: :see_other
   end
 end
 
 def start_session(user)
+  # reset session to prevent session anomalies.
   reset_session
   log_in user
   redirect_to announcements_path

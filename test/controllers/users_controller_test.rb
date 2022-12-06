@@ -14,9 +14,13 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test "delete action follows admin logic" do
-  #   log_in_as(@user_admin)
-  #   get users_path
-  #   assert_template 'users/index'
-  # end
+  test 'should redirect when not logged in' do
+    get users_path
+    assert_redirected_to root_url
+  end
+
+  test 'should redirect to users delete when not logged in' do
+    delete user_path(1)
+    assert_redirected_to users_url
+  end
 end

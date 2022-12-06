@@ -9,10 +9,12 @@ class AnnouncementsController < ApplicationController
 
   def index
     @announcements = Announcement.all
+    # builds a @announcement that is used by the announcement form for params
     @announcement = current_user.announcements.build
   end
 
   def create
+    # creates and modifies params for a new announcement on the current_user
     @announcement = current_user.announcements.build(announcement_params)
     if @announcement.save
       flash[:success] = 'Announcement created!'
@@ -24,10 +26,12 @@ class AnnouncementsController < ApplicationController
   end
 
   def edit
+    # finds the announcement to modify
     @announcement = Announcement.find(params[:id])
   end
 
   def update
+    # finds the announcement to modify, updates it with params
     @announcement = Announcement.find(params[:id])
     @announcement.update!(announcement_params)
     if @announcement.save

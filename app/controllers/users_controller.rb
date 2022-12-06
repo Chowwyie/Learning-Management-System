@@ -4,6 +4,7 @@
 # User that controls all user related manipulations and functions
 class UsersController < ApplicationController
   before_action :authorize_user?, only: [:index]
+  before_action :authorize_admin? only: [:edit]
   layout 'dashboard', except: [:new]
 
   def index; end
@@ -30,6 +31,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     name = @user.name
+    # only updates the admin potential
     @user.update_attribute(:admin, true)
     flash[:success] = "#{name} is now an admin!"
     redirect_to users_path

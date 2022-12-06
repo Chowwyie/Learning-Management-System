@@ -9,7 +9,7 @@
       <%= f.number_field :pointvalue, class: 'form-control' %>
       <%= f.label :duedate, 'Due Date' %>
       <%= f.datetime_field :duedate, class: 'form-control' %>
-      <%= f.label :users, 'Assign Students' %>
+      <%= f.label :users, 'Assign Students (command-click to choose multiple)' %>
       <%= f.collection_select(:users, student_list, :id, :name, {}, {:multiple => true, :required => true}) %>
       <%# <input name="user_id" type="text"> %>
       <%= f.submit "Make New Presentation", class: "btn btn-primary" %>

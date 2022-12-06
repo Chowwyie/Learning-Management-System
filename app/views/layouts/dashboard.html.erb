@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fake Carmen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_85970000000000001/attachments/4/osu-favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1934532599&amp;Signature=R4zpTLEMT1r2PprAzsGAqQehLkU%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public&amp;response-expires=473364000">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= render 'layouts/shim' %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <%= yield(:nav_path) %>
+    </div>
+    <hr class="course-divider">
+    <div class = "content-container">
+    <%= render 'shared/side_nav_bar' %>
+      <div class="page-container">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+      </div>
+    
+  </body>
+</html>

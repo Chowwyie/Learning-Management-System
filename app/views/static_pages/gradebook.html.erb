@@ -1,0 +1,29 @@
+
+<% provide(:nav_path, (render 'layouts/course_path', nav_path: ['Grade Book'])) %>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Student Name</th>
+            <th scope="col">Student Email</th>
+            <th scope="col">Total Graded Points</th>
+            <th scope="col">Out of Total</th>
+            <th scope="col">Percentage Grade</th>
+            <th scope="col">Letter Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% students = User.all.select {|user| !user.admin} %>
+    <% students.each do |user| %>
+        <% gradedPresentations = user.presentations.select {|presentation| presentation.grade}%>
+        <tr>
+            <th scope="row"><%= user.name %></th>
+            <td><%= user.email %></td>
+            <td><%= gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade} %> </td>
+            <td><%= gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue} %> </td>
+            <% grade_percent = (gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade}/gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue} * 100).round(2) %>
+            <td><%= grade_percent.to_s + "%" %></td>
+            <td><%= render "shared/letter_grade", grade: grade_percent %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

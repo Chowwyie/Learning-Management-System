@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Presentation Team</th>
+            <th scope="col">Due</th>
+            <th scope="col">Submitted</th>
+            <th scope="col">Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+    <%# iterate through presentations %>
+    <% presentations.each do |presentation| %>
+        <tr>
+            <th scope="row"><%= link_to presentation.name, presentation_path(presentation) %></th>
+            <td><%= presentation.users.map {|user| user.name}.join(', ') %></td>
+            <td><%= presentation.duedate.to_formatted_s(:short) %></td>
+            <td><%= presentation.submitted %></td>
+            <td><%= presentation.grade %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

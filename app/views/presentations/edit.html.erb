@@ -1,0 +1,18 @@
+<%# navbar styling %>
+<% provide(:nav_path, (render 'layouts/course_path', nav_path: ['Presentations', 'Grade ' + @presentation.name])) %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%# modifies existing presentation%>
+    <%= form_with model: @presentation do |f| %>
+        <%= f.label :name, 'Change Presentation Name' %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :pointvalue, 'Change Point value' %>
+        <%= f.number_field :pointvalue, class: 'form-control' %>
+        <%= f.label :duedate, 'Change Due Date' %>
+        <%= f.datetime_field :duedate, class: 'form-control' %>
+        <%= f.label :grade, 'Change Grade' %>
+        <%= f.number_field :grade, step: :any, class: 'form-control' %>
+        <%= f.submit "Update Presentation", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

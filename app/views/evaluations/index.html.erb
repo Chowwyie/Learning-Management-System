@@ -1,0 +1,23 @@
+<%# navbar styling %>
+<% provide(:nav_path, (render 'layouts/course_path', nav_path: ['Manage Overdue Evaluations'])) %>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Evaluator</th>
+            <th scope="col">Presentation</th>
+            <th scope="col">Evaluation Duedate</th>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+    <%# iterate through all evaluations, filtering by late and not submitted. %>
+    <% Evaluation.all.filter {|evaluation| !evaluation.submitted && (DateTime.now() > evaluation.duedate)}.sort_by(&:duedate).each do |evaluation| %>
+        <tr>
+            <th scope="row"><%= evaluation.user.name %></th>
+            <td><%= evaluation.presentation.name %></td>
+            <td><%= evaluation.duedate.to_formatted_s(:short) %></td>
+            <td><%= link_to "Unassign", evaluation, data: { "turbo-method": :delete, turbo_confirm: "Would you like to unassign this evaluation from #{evaluation.user.name}?" }, class: "btn btn-danger"   %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

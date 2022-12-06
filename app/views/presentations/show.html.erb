@@ -1,0 +1,34 @@
+<%# changes nav path %>
+<% if current_user.admin %>
+    <% parent_link = 'Presentations'%>
+<% else %>
+    <% parent_link = 'Grade Report'%>
+<% end %>
+<% provide(:nav_path, (render 'layouts/course_path', nav_path: [parent_link, 'Evaluations for ' + @presentation.name])) %>
+<% submittedEvals = @presentation.evaluations.select {|evaluation| evaluation.submitted}%>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Evaluation ID</th>
+            <th scope="col">Score</th>
+            <th scope="col">Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% submittedEvals.each do |evaluation|%>
+            <tr>
+                <th scope="row"><%= evaluation.id %></th>
+                <td><%= evaluation.score %></td>
+                <td><%= evaluation.evaluation %></td>
+            </tr>
+        <% end %>
+        <tr class="aggregate-row">
+            <td>Average Score</td>
+            <%# aggregates average score with nan catch %>
+            <% average_score = (submittedEvals.inject(0.0) {|sum, eval| sum + eval.score} / submittedEvals.size).round(2) %>
+            <td><%= !average_score.nan? ? average_score : "N/A" %></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+

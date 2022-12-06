@@ -1,38 +1,40 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class PresentationTest < ActiveSupport::TestCase
   def setup
-    @presentation = Presentation.new(name: "Middleman Project")
+    @presentation = Presentation.new(name: 'Middleman Project', duedate: DateTime.now, pointvalue: 100)
   end
 
-  test "should be valid" do
+  test 'should be valid' do
     assert @presentation.valid?
   end
 
-  test "name should be present" do
-    @presentation.name = ""
+  test 'name should be present' do
+    @presentation.name = ''
     assert_not @presentation.valid?
   end
 
-  test "name should not be too long" do
-    @presentation.name = "a" * 51
+  test 'name should not be too long' do
+    @presentation.name = 'a' * 51
     assert_not @presentation.valid?
   end
 
-  test "grade must be between 0 and 100" do
-    @presentation.grade = 101
+  test 'point value must be greater than 0' do
+    @presentation.pointvalue = -1
     assert_not @presentation.valid?
-    @presentation.grade = -1
-    assert_not @presentation.valid?
-    @presentation.grade = 50
+    @presentation.pointvalue = 100
+    assert @presentation.valid?
+    @presentation.pointvalue = 0
     assert @presentation.valid?
   end
 
-  test "grade defaults as null" do
+  test 'grade defaults as null' do
     assert_nil @presentation.grade
   end
 
-  test "submission defaults to false" do
+  test 'submission defaults to false' do
     assert_not @presentation.submitted?
   end
 end

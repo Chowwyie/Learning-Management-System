@@ -1,12 +1,12 @@
+# frozen_string_literal: true
+
 module UsersHelper
-    def studentList
-        users = User.all
-        students = []
-        users.each do |user|
-            if !user.admin
-                students << user
-            end
-        end
-        students
+  def student_list
+    users = User.all
+    students = []
+    users.each do |user|
+      students << user unless user.admin
     end
+    students
+  end
 end

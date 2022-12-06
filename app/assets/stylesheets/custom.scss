@@ -159,6 +159,12 @@ input {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  #classroom-icon {
+    visibility: hidden;
+  }
+}
+
 #side-navbar {
   position: absolute;
   height: 100%;
@@ -220,6 +226,14 @@ input {
 /* microposts */
 .annoucement-title {
   text-align: left;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: 300;
+  letter-spacing: 0px;
+}
+
+.announcement-icon {
+  width: 2em;
 }
 
 .announcements {
@@ -229,7 +243,7 @@ input {
   overflow-y: scroll;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid #cec7c7;
   }
   .user {
     display: block;
@@ -240,21 +254,29 @@ input {
     display: inline-block;
     font-size: 1.5em;
   }
-  .announcement-icon {
-    display: block;
-  }
   .timestamp {
     color: $gray-light;
     display: block;
   }
 }
 
+#classroom-icon {
+  width: 2.2em;
+  display: inline-block;
+  padding-bottom: 13px;
+  margin-left: 275px;
+}
+
 .page-header {
+  margin-left: 10px;
+  display: inline-block;
   margin-top: 0;
   padding-bottom: 20px;
   font-size: 2.2em;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: 0px;
   margin-bottom: 0px;
+  border-width: 0px;
 }
 
 .deadline-feed {
@@ -341,7 +363,7 @@ hr.course-divider {
 
 
 #home-backdrop {
-  background-image: url(/app/assets/images/oval.jpg);
+  background-image: url(oval.jpg);
   width: 100%;
   height: 650px;
   background-size: 100%;
@@ -354,16 +376,19 @@ hr.course-divider {
   background-repeat: no-repeat;
   color: black;
   min-width: 500px;
-}
-
-.jumbotron h2 {
-  color: black;
-}
-
-.btn-primary {
-  background-color: #bb0000;
-
-  &:hover {
-    background-color: #555;
+  .btn-primary {
+    background-color: #bb0000;
+  
+    &:hover {
+      background-color: #555;
+    }
   }
+}
+
+.col-md-8 {
+  background-color: #f7f7f7;
+  border-color: #e8e8e8;
+  border-radius: 20px;
+  border-width: 0.15em;
+  border-style: solid;
 }

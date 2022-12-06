@@ -5,12 +5,17 @@
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Admin</th>
-        <tr>
+            <td></td>
+        </tr>
     </thead>
     <tbody>
     <% User.all.sort_by(&:name).each do |user| %>
         <tr>
-            <th scope="row"><%= user.name %></th>
+            <% if user.admin %>
+                <th scope="row" class="admin-roster"><%= user.name %></th>
+            <% else %>
+                <th scope="row"><%= user.name %></th>
+            <% end %>
             <td><%= user.email %></td>
             <td><%= user.admin %></td>
             <% if current_user.admin %>

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+##
+# Validations for User model
 class User < ApplicationRecord
   has_many :evaluations, dependent: :delete_all
   has_many :teams, dependent: :delete_all

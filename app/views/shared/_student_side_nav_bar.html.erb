@@ -1,9 +1,9 @@
 <div id="side-navbar">
     <ul>
-        <li class="section"><%= link_to "Announcements", announcements_path, class: is_active('announcements', 'index') %></li>
-        <li class="section"><%= link_to "Grade Report", gradereport_path, class: is_active('presentations', 'student') %></li>
-        <li class="section"><%= link_to "To-Do Evaluations", student_evaluation_path, class: is_active('evaluations', 'student') %></li>
-        <li class="section"><%= link_to "Roster", users_path, class: is_active('users', 'index') %></li>
+        <li class="section"><%= link_to "Announcements", announcements_path, class: active?('announcements', 'index') %></li>
+        <li class="section"><%= link_to "Grade Report", gradereport_path, class: active?('presentations', 'student') %></li>
+        <li class="section"><%= link_to "To-Do Evaluations", student_evaluation_path, class: active?('evaluations', 'student') %></li>
+        <li class="section"><%= link_to "Roster", users_path, class: active?('users', 'index') %></li>
     </ul>
 </div>
 <div id="side-navbar-spacer">

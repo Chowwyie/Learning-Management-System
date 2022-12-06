@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+##
+# Helper utility functions that are related to the Application controller
 module ApplicationHelper
   # Returns the full title on a per-page basis.
   def full_title(page_title = '')

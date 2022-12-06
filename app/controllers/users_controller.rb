@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+##
+# User that controls all user related manipulations and functions
 class UsersController < ApplicationController
   before_action :authorize_user?, only: [:index]
   layout 'dashboard', except: [:new]

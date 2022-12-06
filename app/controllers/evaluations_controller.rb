@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+##
+# Evaluation controller that controls all evaluation related manipulations and functions.
 class EvaluationsController < ApplicationController
-  before_action :authorize_student?, except: [:index]
-  before_action :authorize_admin?, only: [:index]
+  before_action :authorize_student?, except: %i[index destroy]
+  before_action :authorize_admin?, only: %i[index destroy]
   layout 'dashboard'
 
   def index; end
@@ -29,7 +31,7 @@ class EvaluationsController < ApplicationController
   def destroy
     Evaluation.find(params[:id]).destroy
     flash[:success] = 'Evaluation Unassigned'
-    redirect_to evaluations
+    redirect_to evaluations_path
   end
 
   private

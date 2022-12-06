@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+##
+# Presentation controller that controls all presentation related manipulations and functions.
 class PresentationsController < ApplicationController
   before_action :authorize_admin?, only: %i[index new create edit update]
   before_action :authorize_student?, only: [:student]
@@ -19,11 +21,7 @@ class PresentationsController < ApplicationController
     ids = user_ids[:users]
     ids.shift
     if @presentation.save
-      ids.each do |id|
-        @presentation.users << User.find(id)
-      end
-      assign_evaluations(@presentation)
-      flash[:success] = 'Presentation created!'
+      create_presentation_users(ids)
       redirect_to new_presentation_path
     else
       # flash[:danger] = "Failure not saved"
@@ -60,6 +58,14 @@ class PresentationsController < ApplicationController
   end
 
   private
+
+  def create_presentation_users(ids)
+    ids.each do |id|
+      @presentation.users << User.find(id)
+    end
+    assign_evaluations(@presentation)
+    flash[:success] = 'Presentation created!'
+  end
 
   def user_ids
     params.require(:presentation).permit(users: [])

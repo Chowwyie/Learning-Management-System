@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+##
+# Validations for Presentation model
 class Presentation < ApplicationRecord
   has_many :evaluations, dependent: :delete_all
   has_many :teams, dependent: :delete_all

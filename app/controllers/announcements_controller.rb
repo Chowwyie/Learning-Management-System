@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+##
+# Announcement controller that controls all announcement related manipulations and functions.
 class AnnouncementsController < ApplicationController
   before_action :authorize_admin?, only: %i[create edit update]
   before_action :authorize_user?, only: [:index]

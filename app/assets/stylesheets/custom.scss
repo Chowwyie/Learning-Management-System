@@ -4,6 +4,7 @@
 
 /* universal */
 $side-navbar: 15em;
+$scarlet: #bb0000;
 
 html {
   height:100%
@@ -188,7 +189,7 @@ input {
         border-color: white;
         border-style: solid;
         font-size: 1.15em;
-        color: #bb0000;
+        color: $scarlet;
       }
       a:active {
         border-color: #e81b1b;
@@ -282,6 +283,10 @@ input {
 .deadline-feed {
   list-style: none;
   padding: 0;
+  ul {
+    list-style: none;
+    padding-left: 10px;
+  }
   img {
     width: 1.8em;
     display: inline-block;
@@ -310,7 +315,7 @@ input {
     padding: 10px 0;
   }
   .event-name a{
-    color: #bb0000;
+    color: $scarlet;
     margin-top: 5em;
     padding-top: 0;
     font-size: 1.2em;
@@ -331,7 +336,7 @@ input {
 
 .course-path {
   display: flex;
-  color: #bb0000;
+  color: $scarlet;
   font-size: 1.6em;
   font-weight: 300;
   ul{
@@ -377,7 +382,7 @@ hr.course-divider {
   color: black;
   min-width: 500px;
   .btn-primary {
-    background-color: #bb0000;
+    background-color: $scarlet;
   
     &:hover {
       background-color: #555;
@@ -391,4 +396,8 @@ hr.course-divider {
   border-radius: 20px;
   border-width: 0.15em;
   border-style: solid;
+}
+
+.admin-roster{
+  color: $scarlet;
 }

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+##
+# Helper utility functions that are related to the Sessions controller
 module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id

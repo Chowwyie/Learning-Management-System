@@ -5,7 +5,8 @@
             <th scope="col">Evaluator</th>
             <th scope="col">Presentation</th>
             <th scope="col">Evaluation Duedate</th>
-        <tr>
+            <td></td>
+        </tr>
     </thead>
     <tbody>
     <% Evaluation.all.filter {|evaluation| !evaluation.submitted && (DateTime.now() > evaluation.duedate)}.sort_by(&:duedate).each do |evaluation| %>

@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 
+##
+# Session controller that controls all session related manipulations and functions.
+# Main purpose is authetication and authorizations
 class SessionsController < ApplicationController
   def new; end
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user&.authenticate(params[:session][:password])
-      create_session
+      start_session(user)
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new', status: :unprocessable_entity
@@ -19,9 +22,7 @@ class SessionsController < ApplicationController
   end
 end
 
-private
-
-def create_session
+def start_session(user)
   reset_session
   log_in user
   redirect_to announcements_path

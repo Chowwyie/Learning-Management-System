@@ -29,25 +29,28 @@
         </div>
     <% else %>
         <div class="col-md-4">
-        <ul class="deadline-feed">
+        <div class="deadline-feed">
         <% filtered_presentations = current_user.presentations.select {|presentation| (presentation.duedate < DateTime.now + 7) && (presentation.duedate >= DateTime.now)}.sort { |a,b| b.created_at <=> a.created_at } %>
         <% filtered_evaluations = current_user.evaluations.select {|evaluation| (evaluation.duedate < DateTime.now + 7) && (evaluation.duedate >= DateTime.now)}.sort { |a,b| b.created_at <=> a.created_at } %>
-        <%=image_tag("notification-bell.svg", :alt => "Bell Icon")%>
+        <%= image_tag("notification-bell.svg", :alt => "Bell Icon")%>
         <h1>To-Do This Week</h1>
         <h2>Upcoming Presentations</h2>
         <% if filtered_presentations.length == 0 %>
             <span class="no-assignments">Nothing to do this week!</span>
         <% end %>
+        <ul>
         <% filtered_presentations.each do |presentation|%>
             <li>
                 <span class="event-name"><%=link_to presentation.name, presentation_path(presentation) %></span>
                 <span class="timestamp"><%=presentation.duedate.to_formatted_s(:short)%></span>
             </li>
         <% end %>
+        </ul>
         <h2>Upcoming Evaluations</h2>
          <% if filtered_evaluations.length == 0 %>
             <span class="no-assignments">Nothing to do this week!</span>
         <% end %>
+        <ul>
         <% filtered_evaluations.each do |evaluation|%>
             <li>
                 <span class="event-name"><%=link_to evaluation.presentation.name, edit_evaluation_path(evaluation) %></span>
@@ -55,6 +58,7 @@
             </li>
         <% end %>
         </ul>
+        </div>
         </div>
     <% end %>
 </div>

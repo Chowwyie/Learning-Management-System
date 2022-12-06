@@ -11,12 +11,12 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
   get 'gradereport', to: 'presentations#student'
   get 'student_evaluation', to: 'evaluations#student'
   resources :users
   resources :presentations, only: %i[index new show create destroy edit update student]
-  resources :evaluations, only: %i[index edit update]
+  resources :evaluations, only: %i[index edit update destroy]
   resources :announcements, only: %i[index new show create destroy edit update]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

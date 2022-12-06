@@ -9,7 +9,8 @@
             <th scope="col">Out of</th>
             <th scope="col">Percentage Score</th>
             <th scope="col">Letter Grade</th>
-        <tr>
+            <td></td>
+        </tr>
     </thead>
     <tbody>
 
@@ -36,6 +37,7 @@
         <% grade_percent = (gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.grade}/gradedPresentations.inject(0.0) {|sum, presentation| sum + presentation.pointvalue} * 100).round(2) %>
         <td><%= grade_percent.to_s + "%" %></td>
         <td><%= render "shared/letter_grade", grade: grade_percent %></td>
+        <td></td>
     </tr>
     </tbody>
 </table>

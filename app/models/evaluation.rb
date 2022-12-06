@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+##
+# Validations for Evaluation model
 class Evaluation < ApplicationRecord
   belongs_to :user
   belongs_to :presentation

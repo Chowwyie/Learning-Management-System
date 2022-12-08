@@ -19,7 +19,7 @@
     <hr class="course-divider">
     <div class = "content-container">
     <%= render 'shared/side_nav_bar' %>
-      <div class="page-container">
+      <div class="container">
         <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
         <% end %>
